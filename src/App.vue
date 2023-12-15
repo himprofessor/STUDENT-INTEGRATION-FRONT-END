@@ -1,6 +1,17 @@
 <template>
-  <div class="container mx-auto bg-gray-200 rounded-xl shadow border p-8 m-10">
-    <p class="text-3xl text-green-700 font-bold mb-5">Welcome!</p>
-    <p class="text-gray-500 text-lg">Vue and Tailwind CSS in action</p>
+  <div>
+    <HeaderVue />
+    <NavBar />
   </div>
 </template>
+<script>
+import HeaderVue from "./components/HeaderComponent/Header/HeaderVue.vue";
+import NavBar from "./components/HeaderComponent/Navigations/NavBar.vue";
+
+export default {
+  components: {
+    NavBar,
+    HeaderVue,
+  },
+};
+</script>
