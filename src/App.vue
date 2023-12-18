@@ -1,6 +1,15 @@
 <template>
-  <div class="container mx-auto bg-gray-200 rounded-xl shadow border p-8 m-10">
-    <p class="text-3xl text-green-700 font-bold mb-5">Welcome!</p>
-    <p class="text-gray-500 text-lg">Vue and Tailwind CSS in action</p>
+  <div id="app" class="md:mt-20 md:ml-5 md:mr-5 mx-1 md:mx-3" >
+    <CardComponent />
   </div>
 </template>
+
+<script>
+import CardComponent from "./components/card/CardComponent.vue";
+
+export default {
+  components: {
+    CardComponent,
+  },
+};
+</script>
