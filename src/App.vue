@@ -1,14 +1,25 @@
 <template>
-  <div id="app" class="bg-gray-100 p-8 ">
-      <StaffComponent :staffs="staffs"/>
-  </div>
+  <HeaderVue />
+  <NavBar />
+  <SlideshowComponent />
+  <CardComponent />
+  <StaffComponent/>
 </template>
 <script>
 import StaffComponent from "./components/staff/StaffComponent.vue";
+import CardComponent from "./components/card/CardComponent.vue";
+import HeaderVue from "./components/HeaderComponent/Header/HeaderVue.vue";
+import NavBar from "./components/HeaderComponent/Navigations/NavBar.vue";
+import SlideshowComponent from './components/slideshow/SlideshowComponent.vue';
+
 
 export default {
   components: {
     StaffComponent,
+    CardComponent,
+    NavBar,
+    HeaderVue,
+    SlideshowComponent
   },
 };
 </script>

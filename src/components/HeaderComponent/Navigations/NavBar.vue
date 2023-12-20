@@ -5,121 +5,64 @@
         <!-- Logo and Menu Button -->
         <div class="logo_container">
           <span class="logo_helper"></span>
-          <a
-            href="https://www.passerellesnumeriques.org/en/"
-            class="flex items-center space-x-3 rtl:space-x-reverse ml-4"
-          >
-            <img
-              src="@/assets/logo-en.png"
-              alt="Passerelles numériques"
-              id="logo"
-              style="width: 160px; padding-top: 0px; height: auto"
-              data-height-percentage="95"
-              data-actual-width="1263"
-              data-actual-height="534"
-            />
+          <a href="https://www.passerellesnumeriques.org/en/" class="flex items-center space-x-3 rtl:space-x-reverse ml-4">
+            <img src="@/assets/logo-en.png" alt="Passerelles numériques" id="logo" style="width: 160px; padding-top: 0px; height: auto" data-height-percentage="95"  data-actual-width="1263" data-actual-height="534" />
           </a>
         </div>
 
         <!-- Responsive Menu Button for Mobile -->
-        <button
-          class="sm:hidden text-gray-900 dark:text-white hover:text-blue-700 flex items-center"
-          @click="toggleMobileMenu"
-        >
-          <svg
-            class="w-6 h-6 text-gray-900 dark:text-white"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16m-7 6h7"
-            ></path>
+        <button  @click="toggleMobileMenu" class="sm:hidden text-gray-900 dark:text-white hover:text-blue-700 flex items-center">
+          <svg class="w-6 h-6 text-gray-900 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" ></path>
           </svg>
         </button>
 
         <!-- Navigation Links (Hidden on Small Screens) -->
-        <ul
-          class="hidden sm:flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse mr-7"
-        >
+        <ul class="hidden sm:flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse mr-7" >
           <li>
-            <a
-              href="#"
-              class="hover:underline px-3 py-4 rounded-sm flex items-center text-gray-500"
-              >Home</a
-            >
+            <a href="#" class="hover:underline px-3 py-4 rounded-sm flex items-center text-gray-500">
+              Home
+            </a>
           </li>
 
           <li>
-            <a
-              href="#"
-              class="hover:underline px-3 py-4 rounded-sm flex items-center text-gray-500"
-              >Curriculum</a
-            >
+            <a href="#" class="hover:underline px-3 py-4 rounded-sm flex items-center text-gray-500">
+              Curriculum
+            </a>
           </li>
+
           <li>
-            <a
-              href="#"
-              class="hover:underline px-3 py-4 rounded-sm flex items-center text-gray-500"
-              >Department & Staff</a
-            >
+            <a href="#" class="hover:underline px-3 py-4 rounded-sm flex items-center text-gray-500">
+              Department & Staff
+            </a>
           </li>
+
           <li>
             <div class="relative group">
-              <button
-                id="dropdownNavbarLink"
-                data-dropdown-toggle="dropdownNavbar"
-                class="hover:underline px-3 py-4 rounded-sm flex items-center text-gray-500"
-              >
+              <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="hover:underline px-3 py-4 rounded-sm flex items-center text-gray-500">
                 Student's Life
-                <svg
-                  class="w-2.5 h-2.5 ml-2.5"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 10 6"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="m1 1 4 4 4-4"
-                  />
+                <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
                 </svg>
               </button>
-              <div
-                class="dropdown-content absolute hidden bg-white text-black group-hover:block"
-              >
-                <a
-                  href="#"
-                  class="block px-4 py-2 hover:bg-gray-100 text-gray-500"
-                  >Clubs & Organizations</a
-                >
-                <a
-                  href="#"
-                  class="block px-4 py-2 hover:bg-gray-100 text-gray-500"
-                  >Events & Activities</a
-                >
-                <a
-                  href="#"
-                  class="block px-4 py-2 hover:bg-gray-100 text-gray-500"
-                  >Resources</a
-                >
+              <div class="w-64 dropdown-content absolute hidden bg-white border-t-2 border-blue-400 text-black group-hover:block z-10">
+                <a href="#" class="block px-4 py-2 hover:bg-blue-100 text-gray-500">
+                  Clubs & Organizations
+                </a>
+                <a href="#" class="block px-4 py-2 hover:bg-blue-100 text-gray-500">
+                  Events & Activities
+                </a>
+                <a href="#" class="block px-4 py-2 hover:bg-blue-100 text-gray-500">
+                  Resources
+                </a>
               </div>
             </div>
           </li>
 
           <li>
-            <a
-              href="#"
-              class="hover:underline px-3 py-4 rounded-sm flex items-center text-gray-500"
-              >Career Opportunity</a
-            >
+            <a href="#" class="hover:underline px-3 py-4 rounded-sm flex items-center text-gray-500">
+              Career Opportunity
+            </a>
           </li>
         </ul>
       </div>
