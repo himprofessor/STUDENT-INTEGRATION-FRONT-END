@@ -1,18 +1,12 @@
 <template>
-  <div class="group-card md:mt-20 mx-3 md:mx-2 w-full max-w-screen-xl">
-    <h1 class="text-xl font-bold md:mx-3">
+  <div class="group-card md:mt-20 mx-20 max-w-screen-xl">
+    <h1 class="text-xl font-bold ">
       <a href="new/update">New / Updates</a>
     </h1>
-    <br />
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ml-3 mr-3 gap-2 place-content-stretch">
-      <div
-        class="card-item max-w-xs rounded overflow-hidden shadow-lg"
-        v-for="(card, index) in cards"
-        :key="index"
-      >
-        <img :src="card.image" alt="Card Image" class="object-cover card-image" />
-        <div class="card-content p-2 md:p-4">
-          <div class="font-bold text-xl mb-2">{{ card.title }}</div>
+    <div class="card w-full flex flex-wrap justify-between ">
+      <div v-for="(card, index) in cards" :key="index" class="rounded-md shadow shadow-slate-400 w-80 mt-10 card-item">
+          <img :src="card.image" alt="Card Image" class="object-cover card-image mb-5" />
+          <div class="font-bold text-xl mb-2 ">{{ card.title }}</div>
           <p class="text-gray-700 text-base">{{ card.description }}</p>
           <span @click="readDetail(card)" class="text-blue-500 rounded flex items-center cursor-pointer mt-3">
             Read Detail
@@ -64,9 +58,10 @@
               <p class="text-gray-600 text-sm">{{ card.admin }}</p>
             </div>
           </div>
-        </div>
       </div>
     </div>
+
+    
   </div>
 </template>
 
@@ -82,7 +77,27 @@ export default {
           date: "2023-01-01",
           admin: "Admin 1",
         },
-        // Add more cards as needed
+        {
+          image: require('@/assets/ero.png'),
+          title: "PNC",
+          description: "At PNC, we have a lot of clubs such as library, music, dancing ...",
+          date: "2023-01-01",
+          admin: "Admin 1",
+        },
+        {
+          image: require('@/assets/ero.png'),
+          title: "PNC",
+          description: "At PNC, we have a lot of clubs such as library, music, dancing ...",
+          date: "2023-01-01",
+          admin: "Admin 1",
+        },
+        {
+          image: require('@/assets/ero.png'),
+          title: "PNC",
+          description: "At PNC, we have a lot of clubs such as library, music, dancing ...",
+          date: "2023-01-01",
+          admin: "Admin 1",
+        },
       ],
     };
   },
@@ -93,54 +108,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.card-item {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px; /* Adjust the margin as needed */
-}
-
-.card-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.card-item .card-content {
-  padding: 1rem;
-}
-
-.card-image {
-  max-width: 100%;
-  max-height: 50%;
-}
-
-/* styles for mobile */
-.card-grid {
-  gap: 10px;
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
-/* Tablet styles */
-@media screen and (min-width: 600px) {
-  .card-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Desktop styles */
-@media screen and (min-width: 768px) {
-  .card-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* Large desktop styles */
-@media screen and (min-width: 1024px) {
-  .card-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-</style>
