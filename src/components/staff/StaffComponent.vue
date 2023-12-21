@@ -1,6 +1,6 @@
 <template>
   <div class="card-staff">
-    <div class="card-grid mx-20 gap-2 place-content-stretch">
+    <div class="card-grid gap-2 place-content-stretch">
       <div
         class="p-5 mr-5 mt-5 rounded-md shadow shadow-gray-500 card2"
         v-for="staffMember in staff"
@@ -158,23 +158,19 @@ export default {
 };
 </script>
 <style scoped>
-.department {
-  width: 100px;
-  text-align: center;
-}
-.card-staff {
-  display: flex;
-  justify-content: space-between;
-}
 /* styles for mobile */
 .card-grid {
   gap: 10px;
   display: grid;
+  margin-left: 7%;
+  margin-right: 2%;
   grid-template-columns: 1fr;
 }
 /* Tablet styles */
 @media screen and (min-width: 600px) {
   .card-grid {
+    margin-left: 10%;
+    margin-right: 10%;
     grid-template-columns: repeat(2, 1fr);
   }
   .card2 {
@@ -184,6 +180,8 @@ export default {
 /* Desktop styles */
 @media screen and (min-width: 1024px) {
   .card-grid {
+    margin-left: 6%;
+    margin-right: 6%;
     grid-template-columns: repeat(4, 1fr);
   }
 }

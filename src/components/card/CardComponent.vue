@@ -1,12 +1,12 @@
 <template>
-  <div class="group-card md:mt-20 mx-20 max-w-screen-xl">
+  <div class="group-card md:mt-20 max-w-screen-xl">
     <h1 class="text-xl font-bold ">
       <a href="new/update">New / Updates</a>
     </h1>
     <div class="card w-full flex flex-wrap justify-between ">
-      <div v-for="(card, index) in cards" :key="index" class="rounded-md shadow shadow-slate-400 w-80 mt-10 card-item">
+      <div v-for="(card, index) in cards" :key="index" class="rounded-md shadow p-2 shadow-slate-400 w-80 mt-10 card-item">
           <img :src="card.image" alt="Card Image" class="object-cover card-image mb-5" />
-          <div class="font-bold text-xl mb-2 ">{{ card.title }}</div>
+          <div class="font-bold text-xl">{{ card.title }}</div>
           <p class="text-gray-700 text-base">{{ card.description }}</p>
           <span @click="readDetail(card)" class="text-blue-500 rounded flex items-center cursor-pointer mt-3">
             Read Detail
@@ -26,7 +26,7 @@
               />
             </svg>
           </span>
-          <div class="card-g flex justify-between flex-col md:flex-row md:items-center mt-3">
+          <div class="card-g flex justify-between md:flex-row md:items-center mt-3">
             <div class="flex items-center mb-3 md:mb-0 md:mr-4">
               <svg
                 class="w-4 h-4 text-gray-600 mr-1"
@@ -59,9 +59,7 @@
             </div>
           </div>
       </div>
-    </div>
-
-    
+    </div> 
   </div>
 </template>
 
@@ -108,3 +106,35 @@ export default {
   },
 };
 </script>
+<style>
+.group-card{
+  margin-right: 6%;
+  margin-left: 6%;
+}
+/* styles for mobile */
+.card-item {
+  gap: 10px;
+  margin-left: 3%;
+  margin-right: 0%;
+  flex-direction: column; /* Corrected from 'flex-template-columns' to 'flex-direction' */
+}
+
+/* Tablet styles */
+@media screen and (min-width: 600px) {
+  .card-item {
+    margin-left: 0%;
+    margin-right: 0%;
+    flex-direction: column; /* Corrected from 'flex-template-columns' to 'flex-direction' */
+  }
+}
+
+/* Desktop styles */
+@media screen and (min-width: 1024px) {
+  .card-item {
+    margin-left: 0%;
+    margin-right: 0%;
+    flex-direction: column; /* Corrected from 'flex-template-columns' to 'flex-direction' */
+  }
+}
+
+</style>
