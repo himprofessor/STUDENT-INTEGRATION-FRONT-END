@@ -8,11 +8,14 @@ module.exports = {
   theme: {
     extend: {
       backgroundColor: {
-        '#79C0DB': '#79C0DB',
-        '#OO9DE1': '#OO9DE1',
-        '#22BBEA': '#22BBEA',
-        '#CC66OO': '#CC66OO',
+        '#79C0DB': '#79c0DB',
+        '#CC6600': '#CC6600',
+        '#009DE1': '#009DE1',
         '#FF9933': '#FF9933',
+      },
+      fontFamily: {
+        'nunito': ['sans-serif, "Times New Roman", Times, serif'],
+        'MyFont': ['"My Font"', 'serif'] 
       },
     },
   },
