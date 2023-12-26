@@ -1,6 +1,6 @@
 <!-- src/components/card/CardComponent.vue -->
 <template>
- <div class="card-grid grid-cols-4 place-content-stretch p-2 rounded-md shadow shadow-gray-500">
+ <div class="card-grid grid-cols-4 place-content-stretch rounded-md">
   <img :src="card.image" alt="Card Image" class="card-image mb-5" style="width: 100%; max-height: 200px;"/>
     <div class="font-bold text-xl">{{ card.title }}</div>
     <p class="text-gray-700 text-base">{{ card.description }}</p>
