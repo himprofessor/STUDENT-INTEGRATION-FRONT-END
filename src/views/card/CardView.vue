@@ -3,7 +3,7 @@
     <h1 class="text-xl font-bold">
       <a href="new/update">New / Updates</a>
     </h1>
-    <div class="card w-full flex flex-wrap justify-between">
+    <div class="card w-full gap-5 flex flex-wrap">
       <CardComponent
         v-for="(card, index) in cards"
         :key="index"
@@ -51,40 +51,39 @@ export default {
 </script>
 
 <style scoped>
-/* Add your component-specific styles here */
-</style>
-
-<style>
-.card-item {
-  width: 30%;
+.card-grid {
+  width: 23.7%;
 }
 .group-card {
   margin-right: 6%;
   margin-left: 6%;
 }
 /* styles for mobile */
-.card-item {
+.card-grid {
+  width: 95%;
   gap: 10px;
   margin-left: 3%;
   margin-right: 0%;
-  flex-direction: column; /* Corrected from 'flex-template-columns' to 'flex-direction' */
+  grid-template-columns: repeat(1, 1fr);
 }
 
 /* Tablet styles */
 @media screen and (min-width: 600px) {
-  .card-item {
-    margin-left: 0%;
+  .card-grid {
+    width: 47%;
+    margin-left: 1%;
     margin-right: 0%;
-    flex-direction: column; /* Corrected from 'flex-template-columns' to 'flex-direction' */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 /* Desktop styles */
 @media screen and (min-width: 1024px) {
-  .card-item {
+  .card-grid {
+    width: 23.5%;
     margin-left: 0%;
     margin-right: 0%;
-    flex-direction: column; /* Corrected from 'flex-template-columns' to 'flex-direction' */
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 </style>

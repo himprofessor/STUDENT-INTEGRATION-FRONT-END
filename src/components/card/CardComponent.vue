@@ -1,11 +1,11 @@
 <!-- src/components/card/CardComponent.vue -->
 <template>
-  <div class="card-item rounded-md shadow p-2 shadow-slate-400 mt-10">
-    <img :src="card.image" alt="Card Image" class="object-cover card-image mb-5" />
+ <div class="card-grid grid-cols-4 place-content-stretch p-2 rounded-md shadow shadow-gray-500">
+  <img :src="card.image" alt="Card Image" class="card-image mb-5" style="width: 100%; max-height: 200px;"/>
     <div class="font-bold text-xl">{{ card.title }}</div>
     <p class="text-gray-700 text-base">{{ card.description }}</p>
     <span @click="readMore(card)" class="text-blue-500 rounded flex items-center cursor-pointer mt-3">
-      Readmore
+      Read more
       <svg
         class="w-6 h-3 text-blue-400 dark:text-white ml-1"
         aria-hidden="true"
@@ -51,7 +51,7 @@
             d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM12 14c2.67 0 8 1.34 8 4v2H4v-2c0-2.66 5.33-4 8-4zM12 12c-1.33 0-2.67 1.34-2.67 4H14C14 13.34 13.33 12 12 12zm-1.33-7A2.67 2.67 0 0 1 14 7.33c0 1.47-1.2 2.67-2.67 2.67S8.67 8.8 8.67 7.33A2.67 2.67 0 0 1 11.33 5z"
           />
         </svg>
-        <p class="text-gray-600 text-sm">{{ card.admin }}</p>
+        <p class="text-gray-600 text-sm">{{ card.user }}</p>
       </div>
     </div>
   </div>
@@ -65,38 +65,3 @@ export default {
   },
 };
 </script>
-
-<style>
-.card-item{
-  width: 30%;
-}
-.group-card{
-  margin-right: 6%;
-  margin-left: 6%;
-}
-/* styles for mobile */
-.card-item {
-  gap: 10px;
-  margin-left: 3%;
-  margin-right: 0%;
-  flex-direction: column; /* Corrected from 'flex-template-columns' to 'flex-direction' */
-}
-
-/* Tablet styles */
-@media screen and (min-width: 600px) {
-  .card-item {
-    margin-left: 0%;
-    margin-right: 0%;
-    flex-direction: column; /* Corrected from 'flex-template-columns' to 'flex-direction' */
-  }
-}
-
-/* Desktop styles */
-@media screen and (min-width: 1024px) {
-  .card-item {
-    margin-left: 0%;
-    margin-right: 0%;
-    flex-direction: column; /* Corrected from 'flex-template-columns' to 'flex-direction' */
-  }
-}
-</style>
