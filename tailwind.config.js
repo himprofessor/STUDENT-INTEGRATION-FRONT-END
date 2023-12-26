@@ -8,10 +8,10 @@ module.exports = {
   theme: {
     extend: {
       backgroundColor: {
-        '#79C0DB': '#79c0DB',
-        '#CC6600': '#CC6600',
-        '#009DE1': '#009DE1',
-        '#FF9933': '#FF9933',
+        '001': '#79c0DB',
+        '002': '#CC6600',
+        '003': '#009DE1',
+        '004': '#FF9933',
       },
       fontFamily: {
         'nunito': ['sans-serif, "Times New Roman", Times, serif'],
