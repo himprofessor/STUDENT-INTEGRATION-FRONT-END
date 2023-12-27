@@ -1,10 +1,20 @@
 <template>
-    <div class="flex flex-wrap justify-between mx-20">
-        <StaffComponent 
-            v-for="(staff,index) in staffs" 
-            :key="index"
-            :staff="staff"
-        />
+    <div class="md:mx-20 mx-10">
+        <span class="md:text-4xl lg:text-5xl text-xl font-bold ">Our staffs in each department</span><br>
+        <div class="flex flex-wrap md:justify-start">
+            <button type="button" class="fiter bg-002 mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2">All</button>
+            <button type="button" class="fiter mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2">Training Team</button>
+            <button type="button" class="fiter mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2">Social Affair Team</button>
+            <button type="button" class="fiter mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2">Project Team</button>
+            <button type="button" class="fiter mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2">External Relationship Team</button>
+        </div>
+        <div class="flex flex-wrap">
+            <StaffComponent 
+                v-for="(staff,index) in staffs" 
+                :key="index"
+                :staff="staff"
+            />
+        </div>
     </div>
 </template>
 
@@ -39,6 +49,8 @@ export default {
 }
 </script>
 
-<style>
-
-</style>
+<style scoped>
+    .fiter {
+        border: 1px solid gray;
+    }
+</style>>
