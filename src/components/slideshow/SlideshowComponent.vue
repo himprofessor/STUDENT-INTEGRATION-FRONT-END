@@ -1,39 +1,70 @@
 <template>
-    <div class="slides relative h-56 overflow-hidden md:h-96">
-        <button-component v-slot="{ currentSlides }">
-            <carousel-component v-for="(slide, index) in slideshows" :key="index">
-                <div v-show="currentSlides === index + 1" class="duration-700 ease-in-out">
-                    <div class="absolute inset-0">
-                        <img :src="require(`../../assets/slideshow/${slide.image}`)" class="absolute block w-full h-full object-cover" alt="">
-                        <div v-if="slide.title || slide.description" class="absolute inset-0 bg-black bg-opacity-40"></div>
-                    </div>
-                    <span class="absolute text-white inset-20 flex items-center">
-                        <div class="w-full text-center md:block md:w-2/4 md:text-start">
-                            <p v-if="slide.title || slide.description" class="uppercase font-bold text-2xl mb-1 md:text-5xl md:mb-3">{{ slide.title }}</p>
-                            <p class="text-xs md:text-2xl">{{ slide.description }}</p>
-                        </div>
-                    </span>
+  <div class="slides relative h-56 overflow-hidden md:h-96">
+    <button-component v-slot="{ currentSlides }">
+      <carousel-component v-for="(slide, index) in slideshows" :key="index">
+        <div
+          v-show="currentSlides === index + 1"
+          class="duration-700 ease-in-out"
+        >
+          <div class="absolute inset-0">
+            <img
+              :src="require(`../../assets/slideshow/${slide.image}`)"
+              class="absolute block w-full h-full object-cover"
+              alt=""
+            />
+            <div
+              v-if="slide.heading || slide.description"
+              class="absolute inset-0 bg-black bg-opacity-40"
+            ></div>
+          </div>
+          <span class="absolute text-white inset-16 flex items-center">
+                <div class="w-full text-center md:block md:text-start">
+                  <h1
+                    v-if="slide.heading || slide.description"
+                    class="font-bold text-2xl mb-1 md:text-4xl md:mb-3 my-text"
+                  >
+                    {{ slide.heading }}
+                  </h1>
+                  <p class="text-xs md:text-2xl">{{ slide.description }}</p>
                 </div>
-            </carousel-component>
-        </button-component>
-    </div>
+              </span>
+        </div>
+      </carousel-component>
+    </button-component>
+  </div>
 </template>
 
 <script>
-import ButtonComponent from './ButtonComponent.vue';
-import CarouselComponent from './CarouselComponent.vue';
+import ButtonComponent from "./ButtonComponent.vue";
+import CarouselComponent from "./CarouselComponent.vue";
 
 export default {
-    components: { ButtonComponent, CarouselComponent },
-    setup() {
-        const slideshows = [
-            { image: 'slide1.png', title: '', description: ''},
-            { image: 'slide2.png', title: 'Professional Life', description: 'Code Camp is an intensive short working professionals about coding'},
-            { image: 'slide3.png', title: 'IT Support', description: 'To make the text white in your code snippet Camp is an intensive short working professionals' },
-            { image: 'slide4.png', title: 'Mobile Development', description: 'Camp is an intensive short Code Camp is an intensive short working professCamp is an intensive short working professionals' },
-            { image: 'slide5.png', title: 'school environment5', description: 'To make the text white in your code Code Camp is an intensive short snippet' },
-        ];
-        return {slideshows}
-    }
-}
+  components: { ButtonComponent, CarouselComponent },
+  setup() {
+    const slideshows = [
+      { image: "slide1.png", heading: "", description: "" },
+      {
+        image: "slide2.png",
+        heading: "Passerellesnumeriques Cambodia",
+        description: "Welcome class 2024 for coming and join with our mission to get a better life in future!",
+      },
+      {
+        image: "slide3.png",
+        heading: "PNC School Cambodia",
+        description: "Welcome class 2024 for coming and join with our mission to get a better life in future!",
+      },
+      {
+        image: "slide4.png",
+        heading: "Our actions in Cambodia",
+        description: "previously known as CIST, offers a 2 year IT training program based on a holistic educative approach including technical and soft skills, and a personal development program.",
+      },
+      {
+        image: "slide5.png",
+        heading: "Passerellesnumeriques Cambodia",
+        description: "Welcome class 2024 for coming and join with our mission to get a better life in future!",
+      },
+    ];
+    return { slideshows };
+  },
+};
 </script>

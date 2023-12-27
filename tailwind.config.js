@@ -15,7 +15,7 @@ module.exports = {
       },
       fontFamily: {
         'nunito': ['sans-serif, "Times New Roman", Times, serif'],
-        'MyFont': ['"My Font"', 'serif'] 
+        'my-text': ['"Open Sans", Arial, sans-serif'] 
       },
     },
   },
