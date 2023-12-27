@@ -5,7 +5,7 @@
   <CardView />
   <StaffView/>
   <!-- <MapComponent/> -->
-  <FooterComponent/>
+  <FooterView/>
 </template>
 
 <script>
