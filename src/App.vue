@@ -4,7 +4,7 @@
   <SlideshowComponent />
   <CardView />
   <StaffView/>
-  <MapComponent/>
+  <!-- <MapComponent/> -->
   <FooterView/>
 </template>
 
@@ -15,11 +15,11 @@ import CardView from './views/card/CardView.vue'; //
 import HeaderComponent from "./components/header/HeaderComponent.vue";
 import NavbarComponent from "./components/header/NavbarComponent.vue";
 import SlideshowComponent from './components/slideshow/SlideshowComponent.vue';
-import MapComponent from './components/map/MapComponent.vue';
+// import MapComponent from './components/map/MapComponent.vue';
 export default {
   components: {
     SlideshowComponent,
-    MapComponent,
+    // MapComponent,
     StaffView,
     CardView, //
     HeaderComponent,
