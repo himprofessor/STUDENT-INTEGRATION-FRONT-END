@@ -1,5 +1,6 @@
 <template>
-  <div class="md:w-1/2 lg:w-1/4 w-80 py-5 hover:border shadow-md border-black rounded-lg my-5">
+  <div class="md:w-2/2 lg:w-72 w-80 pb-5 shadow-md border border-gray-200 rounded-lg my-3">
+    <!-- department  -->
     <div class="bg-003 rounded-b-lg w-3/4 m-auto p-1">
       <p class="font-normal text-white text-center"> {{ staff.department }}</p>
     </div>
