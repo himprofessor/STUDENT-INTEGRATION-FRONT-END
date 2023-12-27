@@ -16,7 +16,39 @@
           @click="toggleMenu"
           style="font-family: 'Kantumruy Pro', sans-serif"
         >
-          <ion-icon :name="menuIcon"></ion-icon>
+          <svg
+            v-if="menuIcon === 'menu'"
+            class="w-6 h-6 text-gray-800 dark:text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            ></path>
+          </svg>
+
+          <svg
+            v-else-if="menuIcon === 'close'"
+            class="w-6 h-6 text-gray-800 dark:text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          </svg>
         </span>
       </div>
       <ul
@@ -59,7 +91,7 @@
         </li>
         <li
           id="menu-item-600"
-          class="font-serif md:z-10"
+          class="font-serif z-10"
           style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif"
         >
           <div class="relative group">
@@ -87,7 +119,7 @@
               </svg>
             </button>
             <div
-              class="dropdown-content absolute hidden bg-gray-50 text-black group-hover:block w-48 font-serif"
+              class="dropdown-content absolute hidden bg-gray-50 text-black group-hover:block w-48 font-serif z-10"
             >
               <a
                 href="#"
