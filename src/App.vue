@@ -5,12 +5,12 @@
   <CardView />
   <StaffView/>
   <MapComponent/>
-  <FooterComponent/>
+  <FooterView/>
 </template>
 
 <script>
-import FooterComponent from "./components/footer/FooterComponent.vue";
-import StaffView from './views/staff/StaffView.vue'
+import FooterView from "./views/footer/FooterView.vue";
+import StaffView from './views/staff/StaffView.vue';
 import CardView from './views/card/CardView.vue'; // 
 import HeaderComponent from "./components/header/HeaderComponent.vue";
 import NavbarComponent from "./components/header/NavbarComponent.vue";
@@ -24,7 +24,7 @@ export default {
     CardView, //
     HeaderComponent,
     NavbarComponent,
-    FooterComponent,
+    FooterView,
   },
 };
 </script>
