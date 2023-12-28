@@ -31,7 +31,7 @@ export default {
             { image: 'slide2.png', heading: 'Passerellesnumeriques Cambodai Family', description: 'Welcome class 2025 for coming and join with our mission to get a better life in future!'},
             { image: 'slide3.png', heading: 'Passerellesnumeriques Cambodai Building', description: 'Our School still support all of you all the time you need us' },
             { image: 'slide4.png', heading: '', description: '' },
-            { image: 'slide5.png', heading: 'Giveaway a bicycle for girls', description: 'To make sure all of the girls at pn will recive it' },
+            { image: 'slide6.png', heading: 'Passerellesnumeriques Cambodai', description: 'Once they have found a job, all our graduates support their family and their community. On average, our alumni give back 31% of their salary to their families.'},
         ];
         return {slideshows}
     }
