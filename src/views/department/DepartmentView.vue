@@ -1,6 +1,6 @@
 <template>
     <div class="md:mx-20 mx-10 md:my-8 my-4">
-        <span class="md:text-4xl lg:text-5xl text-xl font-bold ">Our department</span><br>
+        <span class="md:text-3xl lg:text-4xl text-lg font-bold ">Our department</span><br>
         <div class="flex flex-wrap mt-3 lg:gap-0 md:gap-5">
             <DepartmentComponent 
                 v-for="(department,index) in departments" 
