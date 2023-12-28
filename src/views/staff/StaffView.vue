@@ -1,14 +1,15 @@
 <template>
-    <div class="md:mx-20 mx-10 mt-10">
+    <DepartmentView />
+    <div class="md:mx-20 mx-10">
         <span class="md:text-4xl lg:text-5xl text-xl font-bold ">Our staffs in each department</span><br>
-        <div class="flex flex-wrap md:justify-start">
+        <div class="flex flex-wrap md:justify-start mb-5">
             <button type="button" class="fiter bg-002 mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2">All</button>
             <button type="button" class="fiter mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2">Training Team</button>
             <button type="button" class="fiter mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2">Social Affair Team</button>
             <button type="button" class="fiter mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2">Project Team</button>
             <button type="button" class="fiter mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2">External Relationship Team</button>
         </div>
-        <div class="flex flex-wrap">
+        <div class="flex flex-wrap lg:gap-3 md:gap-5">
             <StaffComponent 
                 v-for="(staff,index) in staffs" 
                 :key="index"
@@ -16,15 +17,30 @@
             />
         </div>
     </div>
+    <!-- map  -->
+    <div class="campusmap md:mx-20 mx-10 mt-5">
+        <span class="md:text-4xl lg:text-5xl text-xl font-bold ">Campus Map</span><br>
+        <div class="flex flex-wrap md:justify-start mb-5">
+            <button type="button" class="fiter bg-002 mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2">Ground Floor</button>
+            <button type="button" class="fiter mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2">First Floor</button>
+            <button type="button" class="fiter mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2">First Second</button>
+            <button type="button" class="fiter mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2">First Third</button>
+        </div>
+        <MapComponent />
+    </div>
 </template>
 
 <script>
+import MapComponent from '@/components/map/MapComponent.vue'
+import DepartmentView from '@/views/department/DepartmentView.vue'
 import StaffComponent from '@/components/staff/StaffComponent.vue'
 import http from "@/http-common"
 
 export default {
     components:{
-        StaffComponent
+        StaffComponent,
+        DepartmentView,
+        MapComponent
     },
     data(){
         return {
@@ -39,7 +55,7 @@ export default {
                     this.staffs = response.data.data;
                 })
                 .catch((error) =>{
-                    console.log("Error fetching dasta:", error);
+                    console.log("Error fetching data:", error);
                 });
         },
     },
@@ -53,4 +69,4 @@ export default {
     .fiter {
         border: 1px solid gray;
     }
-</style>>
+</style>
