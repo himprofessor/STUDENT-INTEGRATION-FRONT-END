@@ -3,6 +3,7 @@
   <NavbarComponent/>
   <SlideshowComponent />
   <CardView />
+  <SubjectComponent/>
   <StaffView/>
   <!-- <MapComponent/> -->
   <FooterView/>
@@ -16,6 +17,7 @@ import HeaderComponent from "./components/header/HeaderComponent.vue";
 import NavbarComponent from "./components/header/NavbarComponent.vue";
 import SlideshowComponent from './components/slideshow/SlideshowComponent.vue';
 // import MapComponent from './components/map/MapComponent.vue';
+import SubjectComponent from './components/subject/SubjectComponent.vue';
 export default {
   components: {
     SlideshowComponent,
@@ -25,6 +27,7 @@ export default {
     HeaderComponent,
     NavbarComponent,
     FooterView,
+    SubjectComponent
   },
 };
 </script>

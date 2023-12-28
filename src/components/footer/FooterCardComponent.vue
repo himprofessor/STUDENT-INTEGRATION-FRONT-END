@@ -1,6 +1,6 @@
 <template>
    <div class="image">
-        <h1 class=" mx-20">sdfghjk</h1>
+        <h1 class=" mx-20"></h1>
     </div>
 </template>
 
