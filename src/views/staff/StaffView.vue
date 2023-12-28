@@ -1,7 +1,7 @@
 <template>
     <DepartmentView />
     <div class="md:mx-20 mx-10">
-        <span class="md:text-4xl lg:text-5xl text-xl font-bold ">Our staffs in each department</span><br>
+        <span class="md:text-3xl lg:text-4xl text-lg font-bold ">Our staffs in each department</span><br>
         <div class="flex flex-wrap md:justify-start mb-5">
             <button type="button" class="fiter bg-002 mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2">All</button>
             <button type="button" class="fiter mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2">Training Team</button>
@@ -19,7 +19,7 @@
     </div>
     <!-- map  -->
     <div class="campusmap md:mx-20 mx-10 mt-5">
-        <span class="md:text-4xl lg:text-5xl text-xl font-bold ">Campus Map</span><br>
+        <span class="md:text-3xl lg:text-4xl text-lg font-bold ">Campus Map</span><br>
         <div class="flex flex-wrap md:justify-start mb-5">
             <button type="button" class="fiter bg-002 mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2">Ground Floor</button>
             <button type="button" class="fiter mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2">First Floor</button>
