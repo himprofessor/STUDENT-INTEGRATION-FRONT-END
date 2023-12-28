@@ -1,5 +1,5 @@
 <template>
-    <div class="md:mx-20 mx-10">
+    <div class="md:mx-20 mx-10 mt-10">
         <span class="md:text-4xl lg:text-5xl text-xl font-bold ">Our staffs in each department</span><br>
         <div class="flex flex-wrap md:justify-start">
             <button type="button" class="fiter bg-002 mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2">All</button>

@@ -1,62 +1,84 @@
 <template>
-    <div class="flex">
-      <!-- First Card -->
-      <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"></a>
-      <a
-        href="#"
-        class="flex-1 max-w-sm m-4 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+  <h1 class="text-center text-2xl font-bold mt-10">
+    The subjects that will be covered in the two-year program
+  </h1>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mx-4 md:mx-20 mt-5 card">
+    <!-- First Card -->
+    <div class="bg-003 rounded-md">
+      <div
+        class="sub-card flex-1 m-4 my-10 p-6 md:p-10 mx-20 text-center md:text-left outline-none hover:border-blue-400 border-transparent border-2 hover:border-current"
       >
         <h5
-          class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+          class="mb-2 text-xl md:text-2xl font-bold text-gray-900 dark:text-white"
         >
-        IT subjects
+          IT subjects
         </h5>
-        <p class="font-normal text-gray-700 dark:text-gray-400">
-            The Department of Software Engineering aims to graduate world-class super engineers and global leaders by using cutting.
+        <p class="text-gray-700 dark:text-gray-400">
+          The Department of Software Engineering aims to graduate world-class
+          super engineers and global leaders by using cutting-edge technology.
         </p>
-      </a>
-  
-      <!-- Second Card -->
-      <a
-        href="#"
-        class="flex-1 max-w-sm m-4 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
-      >
-        <h5
-          class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
-        >
-        General English
-        </h5>
-        <p class="font-normal text-gray-700 dark:text-gray-400">
-            The Department of Software Engineering aims to graduate world-class super engineers and global leaders by using cutting...
-        </p>
-      </a>
-        <!-- Second Card -->
-        <a
-        href="#"
-        class="flex-1 max-w-sm m-4 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
-      >
-        <h5
-          class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
-        >
-        Professional Life
-        </h5>
-        <p class="font-normal text-gray-700 dark:text-gray-400">
-        The Department of Software Engineering aims to graduate world-class super engineers and global leaders by using cutting...
-
-        </p>
-      </a>  <!-- Second Card -->
-      <a
-        href="#"
-        class="flex-1 max-w-sm m-4 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
-      >
-        <h5
-          class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
-        >
-        Education & Social Development        </h5>
-        <p class="font-normal text-gray-700 dark:text-gray-400">
-            The Department of Software Engineering aims to graduate world-class super engineers and global leaders by using cutting...
-        </p>
-      </a>
+      </div>
     </div>
-  </template>
-  
+
+    <!-- Second Card -->
+    <div class="bg-002 rounded-md">
+      <div
+        class="sub-card flex-1 m-4 my-10 p-6 md:p-10 mx-20 text-center md:text-left outline-none hover:border-blue-400 border-transparent border-2 hover:border-current"
+      >
+        <h5
+          class="mb-2 text-xl md:text-2xl font-bold text-gray-900 dark:text-white"
+        >
+          General English
+        </h5>
+        <p class="text-gray-700 dark:text-gray-400">
+          The Department of Software Engineering aims to graduate world-class
+          super engineers and global leaders by using cutting-edge technology.
+        </p>
+      </div>
+    </div>
+
+    <!-- Third Card -->
+    <div class="bg-002 rounded-md">
+      <div
+        class="sub-card flex-1 m-4 my-10 p-6 md:p-10 mx-20 text-center md:text-left outline-none hover:border-blue-400 border-transparent border-2 hover:border-current"
+      >
+        <h5
+          class="mb-2 text-xl md:text-2xl font-bold text-gray-900 dark:text-white"
+        >
+          Professional Life
+        </h5>
+        <p class="text-gray-700 dark:text-gray-400">
+          The Department of Software Engineering aims to graduate world-class
+          super engineers and global leaders by using cutting-edge technology.
+        </p>
+      </div>
+    </div>
+
+    <!-- Fourth Card -->
+    <div class="bg-003 rounded-md">
+      <div
+        class="sub-card flex-1 m-4 my-10 p-6 md:p-10 mx-20 text-center md:text-left outline-none hover:border-blue-400 border-transparent border-2 hover:border-current"
+      >
+        <h5
+          class="mb-2 text-xl md:text-2xl font-bold text-gray-900 dark:text-white"
+        >
+          Education & Social Development
+        </h5>
+        <p class="text-gray-700 dark:text-gray-400">
+          The Department of Software Engineering aims to graduate world-class
+          super engineers and global leaders by using cutting-edge technology.
+        </p>
+      </div>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+/* On laptops and larger screens */
+@media screen and (min-width: 1024px) {
+  .sub-card {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+</style>
