@@ -38,6 +38,7 @@ export default {
         .then((response) => {
           // Update the cards property with the API response
           this.cards = response.data.data;
+          console.log(this.cards)
         })
         .catch((error) => {
           console.error("Error fetching data:", error);
