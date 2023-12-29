@@ -1,48 +1,56 @@
 <template>
-    <div class="footer bg-003">
-        <div class="group-card p-5 ml-5 mr-5 md:mt-20">
-            <h1 class="flex justify-center text-xl text-white text-center font-bold mb-5">
-                Student's activity
-            </h1>
-            <div class="card mx-10 bg-white gap-5 p-5 flex flex-wrap rounded-md">
-                <FooterCardComponent
-                    v-for="(card, index) in cards"
-                    :key="index"
-                    :card="card"
-                    :readMore="readMore"
-                />
-            </div>
-        </div>
-        <FooterComponent/>
-    </div>
+  <div class="footer bg-003">
+      <div class="group-card p-5 ml-5 mr-5 md:mt-20">
+          <h1 class="flex justify-center text-xl text-white text-center font-bold mb-5">
+              Student's activity
+          </h1>
+          <div class="card mx-10 bg-white gap-5 p-5 flex flex-wrap rounded-md">
+              <FooterCardComponent
+                  v-for="(card, index) in cards"
+                  :key="index"
+                  :card="card"
+                  :readMore="readMore"
+              />
+          </div>
+      </div>
+      <FooterComponent/>
+  </div>
 </template>
 <script>
 import FooterCardComponent from "@/components/footer/FooterCardComponent.vue";
 import FooterComponent from "@/components/footer/FooterComponent.vue";
 export default{
-    components:{
-        FooterComponent,
-        FooterCardComponent,
-    },
-    data() {
+  components:{
+      FooterComponent,
+      FooterCardComponent,
+  },
+  data() {
     return {
-        cards: [
-            { image: 'https://www.passerellesnumeriques.org/wp-content/uploads/2016/03/PNC_students_outside_classroom_2015-60.jpg',
-                title: 'club at pnc',
-                description: 'At pnc hav ealot of club surch as library, music, duncing ...',  
-            },
-            { image: 'https://www.passerellesnumeriques.org/wp-content/uploads/2016/03/PNC_students_outside_classroom_2015-60.jpg',
-                title: 'club at pnc',
-                description: 'At pnc hav ealot of club surch as library, music, duncing ...', 
-            },
-            { image: 'https://www.passerellesnumeriques.org/wp-content/uploads/2016/03/PNC_students_outside_classroom_2015-60.jpg',
-                title: 'club at pnc',
-                description: 'At pnc hav ealot of club surch as library, music, duncing ...',  
-            },
-        ],
+      cards: [
+        {
+          image: '5.png',
+          title: 'Canteen',
+          description: "Student activities during lunch at passerelles numeriques cambodia.",
+        },
+        {
+          image: '6.png',
+          title: 'Aerobics',
+          description: 'Student have aerobics at passerelles numeriques cambodia.',
+        },
+        {
+          image: '4.png',
+          title: 'PN Cambodia Graduation Ceremony',
+          description: 'After school, we had a joint graduation ceremony at passerelles numeriques cambodia.',
+        },
+      ],
     };
+  },
+  methods: {
+    readMore(card) {
+      console.log('Read more clicked for:', card.title);
     },
-}
+  },
+};
 </script>
 <style scoped>
 
@@ -86,4 +94,3 @@ export default{
   }
 }
 </style>
-
