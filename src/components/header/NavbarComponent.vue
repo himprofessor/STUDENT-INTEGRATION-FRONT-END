@@ -164,7 +164,6 @@
       </ul>
     </nav>
   </div>
-  <!-- <router-view /> -->
 </template>
 
 <script>
