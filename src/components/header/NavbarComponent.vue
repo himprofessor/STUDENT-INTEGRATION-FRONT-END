@@ -81,21 +81,15 @@
             Curriculum
           </a>
         </li>
-        <!-- <li class="block px-4 py-2 text-gray-500 font-serif">
-          <a href="/department-staff" class="hover:underline block text-gray-500" style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">
-            Department & Staff
-          </a>
-        </li> -->
-
         <router-link
           to="/department-staff"
-          class="hover:underline block text-gray-500" style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">
-           <li class="block px-4 py-2 text-gray-500 font-serif">
+          class="hover:underline block text-gray-500" 
+          style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">
+           <li class="block px-4 py-2 text-gray-500">
          
             Department & Staff
           </li>
         </router-link>
-
         <li
           id="menu-item-600"
           class="font-serif z-10"

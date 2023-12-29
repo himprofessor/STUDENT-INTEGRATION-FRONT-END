@@ -1,5 +1,4 @@
 <!-- src\views\home\HomeView.vue -->
-
 <template>
   <div>
     <SlideshowComponent />
@@ -10,7 +9,7 @@
 </template>
 
 <script>
-import SubjectComponent from '@/components/subject/SubjectComponent.vue'
+import SubjectComponent from '@/components/subject/SubjectComponent.vue';
 import CardView from '@/views/card/CardView.vue'; // Updated import path
 import SlideshowComponent from '@/components/slideshow/SlideshowComponent.vue'; // Updated import path
 
