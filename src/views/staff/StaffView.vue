@@ -1,4 +1,5 @@
 <template>
+    <SlideshowComponent />
     <DepartmentView />
     <div class="md:mx-20 mx-10">
         <span class="md:text-3xl lg:text-4xl text-lg font-bold ">Our staffs in each department</span><br>
@@ -7,7 +8,7 @@
             <button type="button" class="fiter mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2">Training Team</button>
             <button type="button" class="fiter mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2">Social Affair Team</button>
             <button type="button" class="fiter mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2">Project Team</button>
-            <button type="button" class="fiter mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2">External Relationship Team</button>
+            <button type="button" class="fiter mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2">External Relation Team</button>
         </div>
         <div class="flex flex-wrap lg:gap-3 md:gap-5">
             <StaffComponent 
@@ -35,12 +36,14 @@ import MapComponent from '@/components/map/MapComponent.vue'
 import DepartmentView from '@/views/department/DepartmentView.vue'
 import StaffComponent from '@/components/staff/StaffComponent.vue'
 import http from "@/http-common"
+import SlideshowComponent from '@/components/slideshow/SlideshowComponent.vue'
 
 export default {
     components:{
         StaffComponent,
         DepartmentView,
-        MapComponent
+        MapComponent,
+        SlideshowComponent
     },
     data(){
         return {
@@ -69,4 +72,4 @@ export default {
     .fiter {
         border: 1px solid gray;
     }
-</style>>
+</style>

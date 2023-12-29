@@ -66,40 +66,30 @@
         <li class="block px-4 py-2 text-gray-500 font-serif">
           <a
             href="/"
-            class="hover:underline block hover:bg-gray-100 text-gray-500"
+            class="hover:underline block text-gray-500"
             style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif"
           >
             Home
           </a>
         </li>
-        <li
-          class="hover:underline px-3 py-4 block px-4 py-2 text-gray-500 font-serif"
-        >
+        <li class="block px-4 py-2 text-gray-500 font-serif">
           <a
             href="#"
-            class="block hover:bg-gray-100 text-gray-500"
+            class="hover:underline block text-gray-500"
             style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif"
           >
             Curriculum
           </a>
         </li>
-        <!-- <li class="hover:underline px-3 py-4 block px-4 py-2 text-gray-500 font-serif">
-          <a href="/department-staff" class="block hover:bg-gray-100 text-gray-500" style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">
-            Department & Staff
-          </a>
-        </li> -->
         <router-link
           to="/department-staff"
-          class="block hover:bg-gray-100 text-gray-500"
-          style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif"
-        >
-          <li
-            class="hover:underline px-3 py-4 block px-4 py-2 text-gray-500 font-serif"
-          >
+          class="hover:underline block text-gray-500" 
+          style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">
+           <li class="block px-4 py-2 text-gray-500">
+         
             Department & Staff
           </li>
         </router-link>
-
         <li
           id="menu-item-600"
           class="font-serif z-10"
@@ -166,7 +156,7 @@
         <li class="block px-4 py-2 text-gray-500 font-serif">
           <a
             href="#"
-            class="hover:underline block hover:bg-gray-100 text-gray-500"
+            class="hover:underline block text-gray-500"
             style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif"
             >Career Opportunity</a
           >
@@ -174,7 +164,6 @@
       </ul>
     </nav>
   </div>
-  <!-- <router-view /> -->
 </template>
 
 <script>

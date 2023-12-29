@@ -1,5 +1,5 @@
 <template>
-    <div class="sbg bg-001 mt-10 my-10">
+    <div class="sbg mt-10 my-10">
         <svg  @mousemove="showTooltip" @mouseleave="hideTooltip" width="1007" height="1254" viewBox="0 0 1007 1254" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect class="enabled" data-title="Canteen" data-description="This is the description about canteen" x="308.5" y="0.5" width="698" height="1253" fill="#D9D9D9" stroke="white"/>
             <mask id="path-2-inside-1_283_102" fill="white">
