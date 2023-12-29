@@ -69,4 +69,4 @@ export default {
     .fiter {
         border: 1px solid gray;
     }
-</style>>
+</style>
