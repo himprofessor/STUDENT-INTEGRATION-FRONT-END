@@ -17,6 +17,9 @@ module.exports = {
         'nunito': ['sans-serif, "Times New Roman", Times, serif'],
         'my-text': ['"Open Sans", Arial, sans-serif'] 
       },
+      colors:{
+        'textA':'#009DE1'
+      }
     },
   },
   plugins: [],
