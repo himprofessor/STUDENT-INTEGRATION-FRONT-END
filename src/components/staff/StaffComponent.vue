@@ -1,8 +1,8 @@
 <template>
   <div class="md:w-2/2 lg:w-72 w-80 pb-5 shadow-md border border-gray-200 rounded-lg my-3">
     <!-- department  -->
-    <div class="bg-003 rounded-b-lg w-3/4 m-auto p-1">
-      <p class="font-normal text-white text-center"> {{ staff.department }}</p>
+    <div class="bg-003 rounded-b-lg w-2/4 m-auto p-1">
+      <p class="text-center text-white whitespace-normal font-normal text-xs"> {{ staff.department }}</p>
     </div>
     <!-- image first and last name -->
     <div class="flex flex-col items-center justify-center my-5">

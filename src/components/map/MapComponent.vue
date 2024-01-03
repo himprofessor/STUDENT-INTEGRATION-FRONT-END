@@ -1,30 +1,80 @@
 <template>
     <div class="sbg mt-10 md:mx-20 mx-10 mt-10">
         <span class="md:text-3xl lg:text-4xl text-lg font-bold ">Campus Map</span><br>
+        <!-- button filter each floor  -->
         <div class="flex flex-wrap md:justify-start mb-5">
-            <button type="button" class="fiter bg-002 mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2">Ground Floor</button>
-            <button type="button" class="fiter mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2">First Floor</button>
-            <button type="button" class="fiter mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2">Second Floor</button>
-            <button type="button" class="fiter mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2">Third Floor</button>
+            <button @click="showFloor('ground')" type="button" :class="{'fiter mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2 lg:w-40': true, 'bg-002': currentFloor === 'ground'}">Ground Floor</button>
+            <button @click="showFloor('first')" type="button" :class="{'fiter mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2 lg:w-40': true, 'bg-002': currentFloor === 'first'}">First Floor</button>
+            <button @click="showFloor('second')" type="button" :class="{'fiter mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2 lg:w-40': true, 'bg-002': currentFloor === 'second'}">Second Floor</button>
+            <button @click="showFloor('third')" type="button" :class="{'fiter mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2 lg:w-40': true, 'bg-002': currentFloor === 'third'}">Third Floor</button>
         </div>
         
         <svg  @mousemove="showTooltip" @mouseleave="hideTooltip" width="1007" height="1254" viewBox="0 0 1007 1254" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect class="enabled" data-title="Canteen" data-description="This is the description about canteen" x="308.5" y="0.5" width="698" height="1253" fill="#D9D9D9" stroke="white"/>
-            <mask id="path-2-inside-1_283_102" fill="white">
-                <path d="M0 834H308V1254H0V834Z"/>
-            </mask>
-            <path class="enabled" data-title="A01" data-description="This is the description about A01" d="M0 834H308V1254H0V834Z" fill="#D9D9D9"/>
-            <path class="enabled" data-title="Girl WC" data-description="This is the description about Girl WC" d="M0 834V833H-1V834H0ZM0 1254H-1V1255H0V1254ZM0 835H308V833H0V835ZM308 1253H0V1255H308V1253ZM1 1254V834H-1V1254H1Z" fill="white" mask="url(#path-2-inside-1_283_102)"/>
-            <rect class="enabled" data-title="B05" data-description="This is the description about B05" x="308.5" y="0.5" width="698" height="365" fill="#D9D9D9" stroke="white"/>
-            <rect class="enabled" data-title="Girl WC" data-description="This is the description about Girl WC" x="719.5" y="366.5" width="287" height="101" fill="#D9D9D9" stroke="white"/>
-            <rect class="enabled" data-title="B05" data-description="This is the description about B05" x="308.5" y="366.5" width="410" height="162" fill="#D9D9D9" stroke="white"/>
-            <rect class="enabled" data-title="B05" data-description="This is the description about B05" x="308.5" y="529.5" width="410" height="185" fill="#D9D9D9" stroke="white"/>
-            <rect class="enabled" data-title="Boy WC" data-description="This is the description about Boy WC" x="719.5" y="469.5" width="287" height="101" fill="#D9D9D9" stroke="white"/>
-            <rect class="enabled" data-title="Storage" data-description="This is the description about storage room" x="719.5" y="571.5" width="287" height="143" fill="#D9D9D9" stroke="white"/>
+            <!-- ground floor  -->
+            <g v-if="currentFloor === 'ground'">
+                <rect class="enabled" data-title="Canteen" data-description="This is the description about canteen" x="308.5" y="0.5" width="698" height="1253" fill="#D9D9D9" stroke="white"/>
+                <mask id="path-2-inside-1_283_102" fill="white">
+                    <path d="M0 834H308V1254H0V834Z"/>
+                </mask>
+                <path class="enabled" data-title="A01" data-description="This is the description about A01" d="M0 834H308V1254H0V834Z" fill="#D9D9D9"/>
+                <path class="enabled" data-title="Girl WC" data-description="This is the description about Girl WC" d="M0 834V833H-1V834H0ZM0 1254H-1V1255H0V1254ZM0 835H308V833H0V835ZM308 1253H0V1255H308V1253ZM1 1254V834H-1V1254H1Z" fill="white" mask="url(#path-2-inside-1_283_102)"/>
+                <rect class="enabled" data-title="B05" data-description="This is the description about B05" x="308.5" y="0.5" width="698" height="365" fill="#D9D9D9" stroke="white"/>
+                <rect class="enabled" data-title="Girl WC" data-description="This is the description about Girl WC" x="719.5" y="366.5" width="287" height="101" fill="#D9D9D9" stroke="white"/>
+                <rect class="enabled" data-title="B05" data-description="This is the description about B05" x="308.5" y="366.5" width="410" height="162" fill="#D9D9D9" stroke="white"/>
+                <rect class="enabled" data-title="B05" data-description="This is the description about B05" x="308.5" y="529.5" width="410" height="185" fill="#D9D9D9" stroke="white"/>
+                <rect class="enabled" data-title="Boy WC" data-description="This is the description about Boy WC" x="719.5" y="469.5" width="287" height="101" fill="#D9D9D9" stroke="white"/>
+                <rect class="enabled" data-title="Storage" data-description="This is the description about storage room" x="719.5" y="571.5" width="287" height="143" fill="#D9D9D9" stroke="white"/>
+            </g> 
+            <!-- first floor  --> 
+            <g v-if="currentFloor === 'first'">
+                <rect class="enabled" data-title="Canteen" data-description="This is the description about canteen" x="308.5" y="0.5" width="698" height="1253" fill="#009" stroke="white"/>
+                <mask id="path-2-inside-1_283_102" fill="white">
+                    <path d="M0 834H308V1254H0V834Z"/>
+                </mask>
+                <path class="enabled" data-title="A01" data-description="This is the description about A01" d="M0 834H308V1254H0V834Z" fill="#009"/>
+                <path class="enabled" data-title="Girl WC" data-description="This is the description about Girl WC" d="M0 834V833H-1V834H0ZM0 1254H-1V1255H0V1254ZM0 835H308V833H0V835ZM308 1253H0V1255H308V1253ZM1 1254V834H-1V1254H1Z" fill="white" mask="url(#path-2-inside-1_283_102)"/>
+                <rect class="enabled" data-title="B05" data-description="This is the description about B05" x="308.5" y="0.5" width="698" height="365" fill="#009" stroke="white"/>
+                <rect class="enabled" data-title="Girl WC" data-description="This is the description about Girl WC" x="719.5" y="366.5" width="287" height="101" fill="#009" stroke="white"/>
+                <rect class="enabled" data-title="B05" data-description="This is the description about B05" x="308.5" y="366.5" width="410" height="162" fill="#009" stroke="white"/>
+                <rect class="enabled" data-title="B05" data-description="This is the description about B05" x="308.5" y="529.5" width="410" height="185" fill="#009" stroke="white"/>
+                <rect class="enabled" data-title="Boy WC" data-description="This is the description about Boy WC" x="719.5" y="469.5" width="287" height="101" fill="#009" stroke="white"/>
+                <rect class="enabled" data-title="Storage" data-description="This is the description about storage room" x="719.5" y="571.5" width="287" height="143" fill="#009" stroke="white"/>
+            </g>
+            <!-- second floor  -->
+            <g v-if="currentFloor === 'second'">
+                <rect class="enabled" data-title="Canteen" data-description="This is the description about canteen" x="308.5" y="0.5" width="698" height="1253" fill="#009DE1" stroke="white"/>
+                <mask id="path-2-inside-1_283_102" fill="white">
+                    <path d="M0 834H308V1254H0V834Z"/>
+                </mask>
+                <path class="enabled" data-title="A01" data-description="This is the description about A01" d="M0 834H308V1254H0V834Z" fill="#009DE1"/>
+                <path class="enabled" data-title="Girl WC" data-description="This is the description about Girl WC" d="M0 834V833H-1V834H0ZM0 1254H-1V1255H0V1254ZM0 835H308V833H0V835ZM308 1253H0V1255H308V1253ZM1 1254V834H-1V1254H1Z" fill="white" mask="url(#path-2-inside-1_283_102)"/>
+                <rect class="enabled" data-title="B05" data-description="This is the description about B05" x="308.5" y="0.5" width="698" height="365" fill="#009DE1" stroke="white"/>
+                <rect class="enabled" data-title="Girl WC" data-description="This is the description about Girl WC" x="719.5" y="366.5" width="287" height="101" fill="#009DE1" stroke="white"/>
+                <rect class="enabled" data-title="B05" data-description="This is the description about B05" x="308.5" y="366.5" width="410" height="162" fill="#009DE1" stroke="white"/>
+                <rect class="enabled" data-title="B05" data-description="This is the description about B05" x="308.5" y="529.5" width="410" height="185" fill="#009DE1" stroke="white"/>
+                <rect class="enabled" data-title="Boy WC" data-description="This is the description about Boy WC" x="719.5" y="469.5" width="287" height="101" fill="#009DE1" stroke="white"/>
+                <rect class="enabled" data-title="Storage" data-description="This is the description about storage room" x="719.5" y="571.5" width="287" height="143" fill="#009DE1" stroke="white"/>
+            </g>
+            <!-- third floor  -->
+            <g v-if="currentFloor === 'third'">
+                <rect class="enabled" data-title="Canteen" data-description="This is the description about canteen" x="308.5" y="0.5" width="698" height="1253" fill="#D9D" stroke="white"/>
+                <mask id="path-2-inside-1_283_102" fill="white">
+                    <path d="M0 834H308V1254H0V834Z"/>
+                </mask>
+                <path class="enabled" data-title="A01" data-description="This is the description about A01" d="M0 834H308V1254H0V834Z" fill="#D9D"/>
+                <path class="enabled" data-title="Girl WC" data-description="This is the description about Girl WC" d="M0 834V833H-1V834H0ZM0 1254H-1V1255H0V1254ZM0 835H308V833H0V835ZM308 1253H0V1255H308V1253ZM1 1254V834H-1V1254H1Z" fill="white" mask="url(#path-2-inside-1_283_102)"/>
+                <rect class="enabled" data-title="B05" data-description="This is the description about B05" x="308.5" y="0.5" width="698" height="365" fill="#D9D" stroke="white"/>
+                <rect class="enabled" data-title="Girl WC" data-description="This is the description about Girl WC" x="719.5" y="366.5" width="287" height="101" fill="#D9D" stroke="white"/>
+                <rect class="enabled" data-title="B05" data-description="This is the description about B05" x="308.5" y="366.5" width="410" height="162" fill="#D9D" stroke="white"/>
+                <rect class="enabled" data-title="B05" data-description="This is the description about B05" x="308.5" y="529.5" width="410" height="185" fill="#D9D" stroke="white"/>
+                <rect class="enabled" data-title="Boy WC" data-description="This is the description about Boy WC" x="719.5" y="469.5" width="287" height="101" fill="#D9D" stroke="white"/>
+                <rect class="enabled" data-title="Storage" data-description="This is the description about storage room" x="719.5" y="571.5" width="287" height="143" fill="#D9D" stroke="white"/>
+            </g>
         </svg>
+
+        <!-- tooltips -->
         <div class="description" :style="tooltipStyle" v-if="isTooltipVisible">
-            <span class="title">{{ tooltipContent }}</span>
-            <br />
+            <span class="title">{{ tooltipContent }}</span><br />
             <span class="desc">{{ tooltipDesc }}</span>
         </div>
     </div>
@@ -34,6 +84,7 @@
 export default {
     data() {
         return {
+            currentFloor: "ground",
             isTooltipVisible: false,
             tooltipContent: "",
             tooltipDesc: "",
@@ -65,6 +116,9 @@ export default {
             this.tooltipContent = "";
             this.tooltipDesc = "";
         },
+        showFloor(floor){
+            this.currentFloor = floor;
+        }
     },
 };
 </script>
@@ -93,7 +147,7 @@ export default {
         height: auto;
         line-height: 1.4;
         margin: 0 auto;
-        color: #21669e;
+        color: #009DE1;
         border-radius: 5px;
         background-color: white;
         box-shadow: 0 0 0 1px #eee;
@@ -113,5 +167,8 @@ export default {
         border-right: 10px solid transparent;
         border-top: 10px solid white;
         pointer-events: none;
+    }
+    .fiter{
+        border: 1px solid gray;
     }
 </style>
