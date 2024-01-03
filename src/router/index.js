@@ -9,7 +9,7 @@ const routes = [
     {
         path:'/department-staff',
         name:'/department&staff',
-        component: () => import('../views/staff/StaffView.vue')
+        component: () => import('../views/staff_department/Staff_Department.vue')
     }
 ];
 

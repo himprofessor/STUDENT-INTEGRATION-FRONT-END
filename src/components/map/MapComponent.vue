@@ -1,5 +1,13 @@
 <template>
-    <div class="sbg mt-10 my-10">
+    <div class="sbg mt-10 md:mx-20 mx-10 mt-10">
+        <span class="md:text-3xl lg:text-4xl text-lg font-bold ">Campus Map</span><br>
+        <div class="flex flex-wrap md:justify-start mb-5">
+            <button type="button" class="fiter bg-002 mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2">Ground Floor</button>
+            <button type="button" class="fiter mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2">First Floor</button>
+            <button type="button" class="fiter mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2">Second Floor</button>
+            <button type="button" class="fiter mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2">Third Floor</button>
+        </div>
+        
         <svg  @mousemove="showTooltip" @mouseleave="hideTooltip" width="1007" height="1254" viewBox="0 0 1007 1254" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect class="enabled" data-title="Canteen" data-description="This is the description about canteen" x="308.5" y="0.5" width="698" height="1253" fill="#D9D9D9" stroke="white"/>
             <mask id="path-2-inside-1_283_102" fill="white">

@@ -1,5 +1,5 @@
 <template>
-    <div class="slides relative h-56 overflow-hidden md:h-96">
+    <div class="slides relative h-56 overflow-hidden md:h-96 mt-28">
         <button-component v-slot="{ currentSlides }">
             <carousel-component v-for="(slide, index) in slideshows" :key="index">
                 <div v-show="currentSlides === index + 1" class="duration-700 ease-in-out">
