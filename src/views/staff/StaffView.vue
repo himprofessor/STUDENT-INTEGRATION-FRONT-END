@@ -1,20 +1,29 @@
 <template>
   <div class="md:mx-20 mx-10">
-    <span class="md:text-3xl lg:text-4xl text-lg font-bold"
-      >Our staffs in each department</span
-    ><br />
-    <!-- loop department for filter department name  -->
+    <span class="md:text-3xl lg:text-4xl text-lg font-bold">
+      Our staffs in each department
+    </span>
+    
+    <!-- list and filter department name-->
     <div class="flex flex-wrap md:justify-start mb-5">
-        <button v-for="(departmentName, index) in departmentNames" :key="index" class="fiter bg-002 mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2">
-            {{ departmentName.department_name }}
-        </button>
+      <button @click="filterDepartmentName('all')" 
+        :class="{'fiter mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2': true, 
+        'bg-002': currentDepartment === 'all'}">All
+      </button>
+      <button @click="filterDepartmentName(departmentName.department_name)" 
+        v-for="(departmentName, index) in departmentNames" :key="index" 
+        :class="{'fiter mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2': true, 
+        'bg-002': currentDepartment === departmentName.department_name}">{{ departmentName.department_name }}
+      </button>
     </div>
-    <!-- loop for list staff in each department name -->
+
+    <!-- loop for staff in each department name  -->
     <div class="flex flex-wrap lg:gap-3 md:gap-5">
-      <StaffComponent
-        v-for="(staff, index) in staffs"
-        :key="index"
-        :staff="staff"/>
+      <StaffComponent 
+        v-for="(staff, index) in filteredStaffs" 
+        :key="index" 
+        :staff="staff" 
+      />
     </div>
   </div>
 </template>
@@ -29,11 +38,17 @@ export default {
   },
   data() {
     return {
+      currentDepartment: 'all',
       staffs: [],
       departmentNames: [],
     };
   },
+  mounted() {
+    this.fetchData();
+    this.fetchDataDepartment();
+  },
   methods: {
+    // fetch data staffs
     fetchData() {
       http
         .get("api/staff-list/list")
@@ -44,6 +59,8 @@ export default {
           console.log("Error fetching data:", error);
         });
     },
+
+    // fetch data department
     fetchDataDepartment() {
       http
         .get("api/department-list/list")
@@ -54,11 +71,23 @@ export default {
           console.log("Error fetching data:", error);
         });
     },
+
+    // filter department name
+    filterDepartmentName(departmentName) {
+      this.currentDepartment = departmentName;
+    },
   },
-  mounted() {
-    this.fetchData();
-    this.fetchDataDepartment();
-  },
+
+  // computed for filter each staff in each department 
+  computed: {
+    filteredStaffs() {
+      if (this.currentDepartment === 'all') {
+        return this.staffs;
+      } else {
+        return this.staffs.filter(staff => staff.department === this.currentDepartment);
+      }
+    }
+  }
 };
 </script>
 
