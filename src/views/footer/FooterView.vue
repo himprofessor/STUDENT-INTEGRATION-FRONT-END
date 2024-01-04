@@ -19,39 +19,45 @@
 <script>
 import FooterCardComponent from "@/components/footer/FooterCardComponent.vue";
 import FooterComponent from "@/components/footer/FooterComponent.vue";
-export default{
-  components:{
-      FooterComponent,
-      FooterCardComponent,
+import http from "@/http-common";
+
+export default {
+  components: {
+    FooterComponent,
+    FooterCardComponent,
   },
   data() {
     return {
-      cards: [
-        {
-          image: '5.png',
-          title: 'Canteen',
-          description: "Student activities during lunch at passerelles numeriques cambodia.",
-        },
-        {
-          image: '6.png',
-          title: 'Aerobics',
-          description: 'Student have aerobics at passerelles numeriques cambodia.',
-        },
-        {
-          image: '4.png',
-          title: 'PN Cambodia Graduation Ceremony',
-          description: 'After school, we had a joint graduation ceremony at passerelles numeriques cambodia.',
-        },
-      ],
+      cards: [],
     };
   },
+  mounted() {
+    this.fetchData();
+  },
   methods: {
+    fetchData() {
+      http
+        .get("api/student-activity/list")
+        .then((response) => {
+          // Sort the cards based on the creation date in descending order
+          this.cards = response.data.data.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+
+          // Display only the first three cards
+          this.cards = this.cards.slice(0, 3);
+
+          console.log(this.cards);
+        })
+        .catch((error) => {
+          console.error("Error fetching data:", error);
+        });
+    },
     readMore(card) {
-      console.log('Read more clicked for:', card.title);
+      console.log("Read more clicked for:", card.title);
     },
   },
 };
 </script>
+
 <style scoped>
 
 .card-grid {
