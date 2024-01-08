@@ -5,13 +5,13 @@
     <CardView />
     <CurrculumnComponent />
     <SubjectComponent/>
-    <CareerView />
+    <InternShipView/>
     <PartnershipView />
   </div>
 </template>
 
 <script>
-import CareerView from '@/views/career/CareerView.vue'
+import InternShipView from '@/views/internship/InternShipView.vue'
 import CardView from '@/views/card/CardView.vue'; // Updated import path
 import SlideshowComponent from '@/components/slideshow/SlideshowComponent.vue'; // Updated import path
 import PartnershipView from '../partnership/PartnershipView.vue';
@@ -23,7 +23,7 @@ export default {
     SlideshowComponent,
     CardView,
     PartnershipView,
-    CareerView,
+    InternShipView,
     CurrculumnComponent,
     SubjectComponent,
   },
