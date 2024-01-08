@@ -1,17 +1,17 @@
 <template>
   <div class="group-card">
-    <CareerComponent/>
+    <InternComponent/>
     <ImageComponent :images="imagesArray" />
   </div>
 </template>
 
 <script>
-import CareerComponent from '../../components/career/CareerComponent.vue';
-import ImageComponent from '../../components/career/ImageComponent.vue';
+import InternComponent from '../../components/internship/InternComponent.vue';
+import ImageComponent from '../../components/internship/ImageComponent.vue';
 
 export default {
   components: {
-    CareerComponent,
+    InternComponent,
     ImageComponent,
   },
     data() {
