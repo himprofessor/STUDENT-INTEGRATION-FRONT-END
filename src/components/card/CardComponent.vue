@@ -1,13 +1,15 @@
-<!-- src/components/card/CardComponent.vue -->
 <template>
-  <div class="md:w-80 lg:w-72 w-80 my-2">
-    <!-- img  -->
-    <img :src="card.image" alt="Card Image" class="mb-3 w-full h-48"/>
-    <!-- titel and desc  -->
-    <div class="font-bold text-xl">{{ card.title }}</div>
-    <p class="text-gray-700 text-base">{{ card.description }}</p>
-    <!-- read more  -->
-    <span @click="readMore(card)" class="text-blue-500 rounded flex items-center cursor-pointer mt-3">Read more
+  <div class="lg:w-72 md:w-80 w-full h-96 my-2">
+    <!-- img, title and desc -->
+    <div>
+      <span v-for="(image, index) in card.images" :key="index"></span>
+      <img v-if="card.images" :src="card.images[0]" alt="Card Image" class="mb-3 w-full lg:h-52 h-60 object-cover object-center"/>
+    </div>
+    <p class="font-bold text-xl">{{ card.title }}</p>
+    <p class="text-gray-700 text-base">{{ truncateDescription(card.description) }}</p>
+    <!-- Read more  -->
+    <span @click="showDialog" class="text-blue-500 flex items-center cursor-pointer mt-3">
+      Read more
       <svg class="w-6 h-3 text-blue-400 dark:text-white ml-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
       </svg>
@@ -20,15 +22,60 @@
         </svg>
         <p class="text-gray-600 text-sm">{{ card.created_at }}</p>
       </div>
-      
       <div class="flex items-center">
-        <svg class="w-4 h-4 text-gray-600 mr-1" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM12 14c2.67 0 8 1.34 8 4v2H4v-2c0-2.66 5.33-4 8-4zM12 12c-1.33 0-2.67 1.34-2.67 4H14C14 13.34 13.33 12 12 12zm-1.33-7A2.67 2.67 0 0 1 14 7.33c0 1.47-1.2 2.67-2.67 2.67S8.67 8.8 8.67 7.33A2.67 2.67 0 0 1 11.33 5z"/>
+        <svg class="h-4 w-4 text-gray-600"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />  <circle cx="12" cy="7" r="4" />
         </svg>
         <p class="text-gray-600 text-sm">{{card.created_by}}</p>
       </div>
     </div>
   </div>
+  <!-- dialog -->
+  <div class="dialog fixed lg:top-5 lg:right-0 lg:left-0 md:top-20 md:right-0 md:left-0 top-20 right-0 left-0 z-50  m-auto shadow lg:w-8/12 rounded-lg">
+    <div class="relative">
+      <!-- Modal content -->
+      <div v-if="dialogView" id="popup-modal" tabindex="-1" class="relative bg-white dark:bg-gray-700 animate-zoom-in rounded-lg">
+        <!-- Modal header -->
+        <div class="flex items-center justify-between md:p-5 border-b dark:border-gray-600 sticky top-0">
+          <span class="w-9/12 lg:pl-0 md:pl-0 pl-3">
+            <span class="lg:text-4xl md:text-xl text-lg font-semibold">{{ card.title }}</span>
+            <div class="lg:flex md:flex justify-between mt-3 w-64">
+              <div class="flex items-center mb-3 md:mb-0 md:mr-4">
+                <svg class="h-5 w-5 text-gray-600"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                </svg>
+                <p class="text-gray-600 lg:text-lg md:text-lg text-sm ml-1">{{ card.created_at }}</p>
+              </div>
+              <div class="flex items-center">
+                <svg class="h-5 w-5 text-gray-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">  
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />  <circle cx="12" cy="7" r="4" />
+                </svg>
+                <p class="text-gray-600 lg:text-lg md:text-lg text-sm ml-1">{{card.created_by}}</p>
+              </div>
+            </div>
+          </span>
+          <button @click="hideDialog" type="button" class="absolute top-3 end-2.5 text-dark text-sm w-8 h-8 ms-auto inline-flex justify-center items-center" data-modal-hide="popup-modal" >
+            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+            </svg>
+            <span class="sr-only">Close modal</span>
+          </button>
+        </div>
+        <!-- Modal body -->
+        <div class="detail p-4 md:p-5 overflow-y-auto overflow-x-hidden">
+          <div class="mb-3">
+            <span v-for="(image, index) in card.images" :key="index"  v-show="activeIndex === index" class="flex lg:h-96 md:h-96 h-68">
+              <img :src="image" alt="" class="w-full object-cover object-center">
+            </span>
+          </div>
+          <span>
+            {{ card.description }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div v-if="dialogView" class="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 z-40"></div>
 </template>
 
 <script>
@@ -37,5 +84,55 @@ export default {
     card: Object,
     readMore: Function,
   },
+  data() {
+    return {
+      showFullDescription: false,
+      dialogView: false,
+      activeIndex: 0,
+    };
+  },
+  mounted() {
+    this.startSlideshow();
+  },
+  methods: {
+    // lease text 
+    truncateDescription(description) {
+      if (description.length > 110 && !this.showFullDescription) {
+        return description.slice(0, 110) + ' ' + '...';
+      }
+      return description;
+    },
+    // dialog 
+    showDialog() {
+      this.dialogView = true;
+    },
+    hideDialog() {
+      this.dialogView = false;
+    },
+    // read more show from one to one
+    startSlideshow() {
+      setInterval(() => {
+        this.activeIndex = (this.activeIndex + 1) % this.card.images.length;
+      }, 4000);
+    },
+  },
 };
 </script>
+<style scoped>
+  .detail{
+    height: 450px;
+  }
+  @keyframes zoom-in {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  .animate-zoom-in {
+    animation: zoom-in 0.3s ease-in-out;
+  }
+</style>

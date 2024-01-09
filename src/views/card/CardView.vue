@@ -1,6 +1,6 @@
 <template>
-  <div class="mx-10 md:mx-20">
-    <h1 class="lg:text-4xl md:text-3xl text-lg font-bold lg:my-6 md:my-5 my">
+  <div class="lg:mx-20 md:mx-20 mx-5">
+    <h1 class="lg:text-3xl md:text-3xl text-lg font-bold lg:my-6 md:my-5 my">
       <a href="new/update">New / Updates</a>
     </h1>
     <div class="flex flex-wrap lg:gap-3 md:gap-5">
