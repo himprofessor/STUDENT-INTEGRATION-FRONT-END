@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-col justify-center md:h-full mt-5 ">
-        <h1 class="lg:text-4xl md:text-3xl text-lg font-bold lg:my-6 md:my-5 mx-20">Curriculum</h1>
+        <h1 class="lg:text-4xl md:text-3xl text-lg font-bold lg:my-6 md:my-5 lg:mx-20 md:mx-20 mx-5 ">Curriculum</h1>
         <div v-for="(currculum, index) in currculums" :key="index" class="relative flex flex-col md:flex-row md:space-x-3 space-y-3 md:space-y-0 md:mx-20 mx-5 mt-3 rounded-lg">
             <div class="md:w-1/5 grid md:place-items-center w-full">
                 <img :src="require(`../../assets/currculumn/${currculum.image}`)" alt="currculum logo" class="md:h-32 md:w-2/2 w-96 h-48 my-3" />

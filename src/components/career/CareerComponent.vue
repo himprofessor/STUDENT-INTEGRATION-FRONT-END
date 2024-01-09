@@ -1,7 +1,7 @@
 <template>
-  <div class="g-title text-center mx-20">
-    <h1 class="text-center p-5 text-3xl font-bold">Internship Program at The End of Year 2</h1>
-    <p>
+  <div class="g-title text-center lg:mx-20 md:mx-10 mx-5">
+    <h1 class="text-center py-5 lg:text-3xl md:text-2xl text-lg font-bold">Internship Program at The End of Year 2</h1>
+    <p class="lg:text-center">
       The Department of Software Engineering aims to graduate world-class super
       engineers and global leaders by using cutting edge technologies and
       innovation-centric education to respond to the challenges of an
