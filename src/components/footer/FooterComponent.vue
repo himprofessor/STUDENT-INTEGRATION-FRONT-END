@@ -32,65 +32,42 @@
           style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif"
         >
           <!-- Menu Items -->
-          <li class="block px-4 py-2 text-white font-serif">
-            <a href="#" class="block hover:text-gray-600 text-white" style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">Home</a>
+          <li class="block px-4 py-2 text-gray-500 font-serif">
+          <a :class="{ 'text-textA': !$route.path || $route.path === '/' }" href="/" class="block hover:text-gray-600 text-white" style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">
+            Home
+          </a>
           </li>
-          <li class="px-3 py-4 block px-4 py-2 text-gray-500 font-serif">
-            <a href="#" class="block hover:text-gray-600 text-white" style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">Curriculum</a>
+          <li class="block px-4 py-2 text-gray-500 font-serif">
+          <a :class="{ 'text-textA': $route.path === '/curriculum' }" href="#" class="block hover:text-gray-600 text-white" style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">
+            Curriculum
+          </a>
           </li>
-          <li class="block px-4 py-2 text-white font-serif">
-            <a href="#" class="block hover:text-gray-600 text-white" style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">Department & Staff</a>
-          </li>
-          <li
-            id="menu-item-600"
-            class="font-serif md:z-10"
-            style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif"
-          >
-            <div class="relative group">
-              <button
-                id="dropdownNavbarLink"
-                data-dropdown-toggle="dropdownNavbar"
-                class="px-3 py-4 rounded-sm flex items-center text-white font-serif"
-                style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif"
-              >
-                Student's Life
-                <svg
-                  class="w-2.5 h-2.5 ml-2.5"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 10 6"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="m1 1 4 4 4-4"
-                  />
-                </svg>
-              </button>
-              <div
-                class="dropdown-content absolute hidden bg-gray-50 text-black group-hover:block w-48 font-serif dropdown-up"
-              >
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-gray-500"
-                  style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif;"
-                >Clubs & Organizations</a>
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-gray-500"
-                  style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif;"
-                >Events & Activities</a>
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-gray-500"
-                  style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif;"
-                >Resources</a>
-              </div>
+          <router-link to="/department-staff" class="block text-gray-500" style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">
+            <li :class="{ 'text-textA': $route.path === '/department-staff' }" class="block hover:text-gray-600 text-white">
+              Department & Staff
+            </li>
+          </router-link>
+          <li id="menu-item-600" class="font-serif z-10" style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">
+          <div class="relative group">
+            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="px-3 py-4 rounded-sm flex items-center text-white font-serif" style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">
+              Student's Life
+              <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+              </svg>
+            </button>
+            <div class="dropdown-content absolute hidden bg-gray-50 text-black group-hover:block w-48 font-serif dropdown-up">
+              <a href="#" class="hover:text-textA block px-3 py-2 text-gray-500" style=" font-size: 14px; font-family: 'Kantumruy Pro', sans-serif;">
+                Clubs & Organizations
+              </a>
+              <a href="#" class="hover:text-textA block px-3 py-2 text-gray-500" style=" font-size: 14px; font-family: 'Kantumruy Pro', sans-serif;">
+                Events & Activities
+              </a>
+              <a href="#" class="hover:text-textA block px-3 py-2 text-gray-500" style="font-size: 14px;font-family: 'Kantumruy Pro', sans-serif;">
+                Resources
+              </a>
             </div>
-          </li>
+          </div>
+        </li>
           <li class="block px-4 py-2 text-gray-500 font-serif">
             <a href="#"
             class="block hover:text-gray-600 text-white" style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">Contact Us</a>

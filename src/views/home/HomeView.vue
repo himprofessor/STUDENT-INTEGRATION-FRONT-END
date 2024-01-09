@@ -1,29 +1,29 @@
 <!-- src\views\home\HomeView.vue -->
 <template>
   <div>
-    <SlideshowComponent />
+    <SlideshowView />
     <CardView />
     <CurrculumnComponent />
     <SubjectComponent/>
-    <CareerView />
+    <InternShipView/>
     <PartnershipView />
   </div>
 </template>
 
 <script>
-import CareerView from '@/views/career/CareerView.vue'
+import InternShipView from '@/views/internship/InternShipView.vue'
 import CardView from '@/views/card/CardView.vue'; // Updated import path
-import SlideshowComponent from '@/components/slideshow/SlideshowComponent.vue'; // Updated import path
+import SlideshowView from '@/views/slideshow/SlideshowView.vue'; // Updated import path
 import PartnershipView from '../partnership/PartnershipView.vue';
 import CurrculumnComponent from '@/components/currculumn/CurrculumnComponent.vue';
 import SubjectComponent from '@/components/subject/SubjectComponent.vue';
 
 export default {
   components: {
-    SlideshowComponent,
+    SlideshowView,
     CardView,
     PartnershipView,
-    CareerView,
+    InternShipView,
     CurrculumnComponent,
     SubjectComponent,
   },

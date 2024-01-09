@@ -1,44 +1,40 @@
+<!-- CareerComponent.vue -->
 <template>
-  <div class="g-title text-center lg:mx-20 md:mx-10 mx-5">
-    <h1 class="text-center py-5 lg:text-3xl md:text-2xl text-lg font-bold">Internship Program at The End of Year 2</h1>
-    <p class="lg:text-center">
-      The Department of Software Engineering aims to graduate world-class super
-      engineers and global leaders by using cutting edge technologies and
-      innovation-centric education to respond to the challenges of an
-      ever-changing world.
-    </p>
-    <div class="flex justify-center items-center text-center">
-      <span
-        @click="readMore"
-        class="text-blue-500 underline underline-offset-4 rounded flex items-center cursor-pointer mt-3"
-      >
-        Read more
-        <svg
-          class="h-4 w-5 text-blue-400"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          stroke-width="2"
-          stroke="currentColor"
-          fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path stroke="none" d="M0 0h24v24H0z" />
-          <polyline points="7 7 12 12 7 17" />
-          <polyline points="13 7 18 12 13 17" />
-        </svg>
-      </span>
+  <div class="card flex flex-col md:flex-row bg-003">
+    <div class="md:w-2/5 lg:w-1/2 grid md:place-items-center w-full">
+      <img
+        :src="externalImageUrl"
+        alt="Career Image"
+        class="w-full h-full object-cover"
+      />
+    </div>
+    <div class="md:w-5/6 bg-white shadow-md flex flex-col space-y-2 md:p-3 font-nunito md:text-start pb-3">
+      <div class="mb-2">
+        <p class="text-lg font-bold">{{ career.job_title }}</p>
+      </div>
+      <div class="mb-2">
+        <p class="text-gray-500">{{ career.job_description }}</p>
+      </div>
+      <div class="mb-2">
+        <p class="text-gray-600">salary: 200$ - 500$</p>
+      </div>
+      <!-- Add more content as needed -->
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  methods: {
-    readMore() {
-      console.log('Read more clicked');
-    }
-  }
-}
+  data() {
+    return {
+      externalImageUrl: "https://www.passerellesnumeriques.org/wp-content/uploads/2016/03/PNC_students_outside_classroom_2015-30.jpg",
+    };
+  },
+  props: {
+    career: {
+      type: Object,
+      required: true,
+    },
+  },
+};
 </script>
