@@ -1,12 +1,12 @@
 <template>
-  <div class="lg:w-72 md:w-80 w-full h-96 my-2">
+  <div class="lg:w-72 md:w-80 w-full my-2">
     <!-- img, title and desc -->
     <div>
       <span v-for="(image, index) in card.images" :key="index"></span>
       <img v-if="card.images" :src="card.images[0]" alt="Card Image" class="mb-3 w-full lg:h-52 h-60 object-cover object-center"/>
     </div>
-    <p class="font-bold text-xl">{{ card.title }}</p>
-    <p class="text-gray-700 text-base">{{ truncateDescription(card.description) }}</p>
+    <p class="font-bold md:text-xl text-lg">{{ card.title }}</p>
+    <p class="text-gray-700 text-base h-16">{{ truncateDescription(card.description) }}</p>
     <!-- Read more  -->
     <span @click="showDialog" class="text-blue-500 flex items-center cursor-pointer mt-3">
       Read more

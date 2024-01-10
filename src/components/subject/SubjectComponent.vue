@@ -1,5 +1,5 @@
 <template>
-  <h1 class="text-center text-2xl font-bold mt-10">
+  <h1 class="text-center lg:text-3xl md:text-2xl text-xl font-bold mt-3">
     The subjects that will be covered in the two-year program
   </h1>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mx-4 md:mx-20 mt-5 card">
