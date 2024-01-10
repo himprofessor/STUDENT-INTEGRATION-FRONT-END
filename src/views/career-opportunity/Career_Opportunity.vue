@@ -39,7 +39,7 @@
     methods: {
         fetchData() {
   http
-    .get("api/career-opportunity/list")
+    .get("api/career/list")
     .then((response) => {
       this.careers = response.data.data;
       console.log(this.careers); // Log the data to the console
