@@ -35,16 +35,17 @@ export default {
     this.fetchData();
   },
   methods: {
-    fetchData() {
-      http
-      .get("api/career-opportunity/list")
-      .then((response) => {
-        this.careers = response.data.data;
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-      });
+      fetchData() {
+  http
+    .get("api/career/list")
+    .then((response) => {
+      this.careers = response.data.data;
+      console.log(this.careers); // Log the data to the console
+    })
+    .catch((error) => {
+      console.error("Error fetching data:", error);
+    });
+},
     },
-  },
-};
-</script>
+  };
+  </script>
