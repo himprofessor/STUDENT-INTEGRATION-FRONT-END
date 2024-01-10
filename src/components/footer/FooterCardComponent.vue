@@ -2,7 +2,7 @@
   <div class="lg:w-[32%] md:w-[48%] w-full">
     <div>
       <span v-for="(image, index) in card.images" :key="index"></span>
-      <img v-if="card.images" :src="card.images[0]" alt="Card Image" class="object-cover object-center"/>
+      <img v-if="card.images" :src="card.images[0]" alt="Card Image" class="object-cover object-center lg:h-64 md:h-56 h-full"/>
     </div>
     <div class="font-bold md:text-xl text-lg">{{ card.title }}</div>
     <p class="text-gray-700 text-base h-15">{{ truncateDescription(card.description) }}</p>

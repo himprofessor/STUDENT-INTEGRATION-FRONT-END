@@ -1,5 +1,5 @@
 <template>
-  <div class="body fixed top-0 left-0 right-0 bg-white z-10 mt-10">
+  <div class="navbar bg-white sticky top-0 right-0 left-0 z-20">
     <nav class="p-4 md:flex md:items-center md:justify-between">
       <div class="flex justify-between items-center">
         <span class="text-2xl font-[Poppins] cursor-pointer font-serif" style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">

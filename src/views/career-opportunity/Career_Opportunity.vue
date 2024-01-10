@@ -1,17 +1,15 @@
 <template>
-  <div class="mt-20">
-    <CareerImage/>
-    <div>
-      <h1 class="font-bold mt-10 text-lg mx-5 lg:mx-24 md:mx-10">
-        Jobs list below:
-      </h1>
-      <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 lg:mx-20 md:mx-10 mx-5">
-        <CareerComponent
-          v-for="(career, index) in careers"
-          :key="index"
-          :career="career">
-        </CareerComponent>
-      </div>
+  <CareerImage/>
+  <div>
+    <h1 class="font-bold mt-10 text-lg mx-5 lg:mx-24 md:mx-10">
+      Jobs list below:
+    </h1>
+    <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 lg:mx-20 md:mx-10 mx-5">
+      <CareerComponent
+        v-for="(career, index) in careers"
+        :key="index"
+        :career="career">
+      </CareerComponent>
     </div>
   </div>
 </template>
