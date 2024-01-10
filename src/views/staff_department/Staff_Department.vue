@@ -1,9 +1,9 @@
 <template>
-    <div class="mt-20">
+    <!-- <div class="mt-0"> -->
         <DepartmentView />
         <StaffView />
         <MapComponent />
-    </div>
+    <!-- </div> -->
 </template>
 
 <script>

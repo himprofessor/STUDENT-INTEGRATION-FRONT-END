@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1 class="text-2xl font-bold mb-4">Slideshow View</h1>
     <slideshow-component :slides="slides"></slideshow-component>
   </div>
 </template>

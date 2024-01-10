@@ -1,6 +1,6 @@
 <template>
-  <div class="md:mx-20 mx-10 md:my-8 my-4">
-    <div class="flex flex-wrap mt-3 lg:gap-0 md:gap-5">
+  <div class="lg:mx-20 md:mx-10 mx-5">
+    <div class="flex flex-wrap lg:gap-3 md:gap-5">
       <DepartmentComponent
         v-for="(department, index) in departments"
         :key="index"

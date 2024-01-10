@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-003">
+  <div class="bg-003 mt-5">
     <div class="header">
       <h1 class="py-3 flex justify-center text-xl text-white text-center font-bold">
         Student's activity

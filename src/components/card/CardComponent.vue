@@ -34,7 +34,7 @@
   <div class="dialog fixed lg:top-5 lg:right-0 lg:left-0 md:top-20 md:right-0 md:left-0 top-20 right-0 left-0 z-50  m-auto shadow lg:w-8/12 rounded-lg">
     <div class="relative">
       <!-- Modal content -->
-      <div v-if="dialogView" id="popup-modal" tabindex="-1" class="relative bg-white dark:bg-gray-700 animate-zoom-in rounded-lg">
+      <div v-if="dialogView" id="popup-modal" tabindex="-1" class="relative bg-white dark:bg-gray-700 animate-zoom-in rounded-lg border border-2">
         <!-- Modal header -->
         <div class="flex items-center justify-between md:p-5 border-b dark:border-gray-600 sticky top-0">
           <span class="w-9/12 lg:pl-0 md:pl-0 pl-3">
@@ -97,8 +97,8 @@ export default {
   methods: {
     // lease text 
     truncateDescription(description) {
-      if (description.length > 110 && !this.showFullDescription) {
-        return description.slice(0, 110) + ' ' + '...';
+      if (description.length > 100 && !this.showFullDescription) {
+        return description.slice(0, 100) + ' ' + '...';
       }
       return description;
     },
