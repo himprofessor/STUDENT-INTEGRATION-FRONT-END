@@ -14,7 +14,7 @@ export default {
     InternComponent,
     ImageComponent,
   },
-    data() {
+  data() {
     return {
       imagesArray: [
         "https://www.passerellesnumeriques.org/wp-content/uploads/2016/05/PNP_Centre1_-1.jpg",
