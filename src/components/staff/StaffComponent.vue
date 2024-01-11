@@ -1,8 +1,8 @@
 <template>
-  <div class="md:w-2/2 lg:w-72 w-80 pb-5 shadow-md border border-gray-200 rounded-lg my-3 bg-gray-100">
+  <div @click="openDialog" class="md:w-2/2 lg:w-72 w-80 pb-5 shadow-md border border-gray-200 rounded-lg my-3 bg-gray-100">
     <!-- department  -->
     <div class="bg-003 rounded-b-lg w-2/4 m-auto p-1">
-      <p class="text-center text-white whitespace-normal font-normal text-xs"> {{ staff.department }}</p>
+      <p class="text-center text-white whitespace-normal font-normal text-xs">{{ staff.department }}</p>
     </div>
     <!-- image first and last name -->
     <div class="flex flex-col items-center justify-center my-5">
@@ -20,15 +20,36 @@
     </span>
     <p class="text-center dark:text-dark whitespace-normal flex-wrap font-bold text-sm">Contact info</p>
     <p class="text-center dark:text-dark whitespace-normal flex-wrap font-normal text-xs">{{ staff.phone }}</p>
-    <p class="text-center dark:text-dark whitespace-normal font-normal  text-xs">{{ staff.email }}</p>
+    <p class="flex flex-wrap whitespace-normal break-all text-center justify-center dark:text-dark whitespace-normal flex-wrap font-normal text-xs">{{ staff.email }}</p>
   </div>
+  <!-- StaffDialog component -->
+  <StaffDialog v-if="dialogView" :staffDetails="staff" @close="closeDialog" />
 </template>
 
 <script>
+import StaffDialog from "./StaffDialog.vue";
+
 export default {
   props: {
     staff: Object,
   },
-  data() {return {}},
+  data() {
+    return {
+     
+      dialogView: false,
+    };
+  },
+  methods: {
+    openDialog() {
+      this.dialogView = true;
+    },
+    closeDialog() {
+      this.dialogView = false;
+    },
+  },
+  components: {
+    StaffDialog,
+  },
 };
 </script>
+
