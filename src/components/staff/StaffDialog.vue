@@ -1,19 +1,19 @@
 <template>
   <!-- dialog -->
   <div
-    class="dialog fixed lg:top-5 lg:right-0 lg:left-0 md:top-20 md:right-0 md:left-0 top-20 right-0 left-0 z-50 m-auto shadow lg:w-8/12 rounded-lg"
+    class="dialog fixed lg:top-10 lg:right-0 lg:left-0 md:top-20 md:right-0 md:left-0 top-20 right-0 left-0 z-50 m-auto shadow lg:w-8/12 rounded-lg lg:mt-5 md:mt-10"
   >
     <div class="relative">
       <!-- Modal content -->
       <div v-if="staffDetails" id="popup-modal" tabindex="-1" class="relative bg-white dark:bg-gray-700 rounded-lg w-70" >
         <!-- Modal header -->
-        <div class="flex items-center justify-between md:p-2 border-b dark:border-gray-600 sticky top-0">
-          <span class="w-9/12 lg:pl-0 md:pl-0 pl-3">
-            <span class="lg:text-2xl md:text-xl text-lg font-semibold ml-4">Detail Information Staff</span>   
+        <div class="lg:mx-5 md:mx-5 mx-5 flex items-center justify-between border-b dark:border-gray-600 sticky top-0">
+          <span class="w-9/12 lg:my-3 md:my-2 my-2">
+            <span class="lg:text-2xl md:text-xl text-sm font-semibold">Detail Information Staff</span>   
           </span>
           <button
             @click="closeDialog"
-            class="text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 transition duration-150 ease-in-out"
+            class="text-gray-500 "
           >
             <svg  class="h-5 w-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" >     
               <path
@@ -27,47 +27,43 @@
           </button>
         </div>
         <!-- //Model body-->
-        <div class="modal-body border-r">
-          <div class="flex p-4 md:p-5 h-[350px] overflow-y-auto overflow-x-hidden">    
-            <div class="md:w-1/3 text-center px-5 mb-4 text-center px-5 border-r">
+        <div class="modal-body lg:border-r md:border-b">
+          <div class="lg:flex md:flex md:mt-5 lg:h-[370px] md:h-[350px] h-[450px] overflow-y-auto overflow-x-hidden lg:mb-5 md:mb-4 mb-5">    
+            <div class="lg:w-[27%] md:w-1/3 text-center mb-4 border-r-2">
               <img
                 :src="staffDetails.media_id"
                 alt="Staff Image"
-                class="w-24 h-24 rounded-full mx-auto"
+                class="w-24 h-24 rounded-full mx-auto lg:mt-0 md:mt-0 "
               />
-              <h2 class="mt-3 whitespace-wrap text-2xl text-gray-950">
+              <strong class="mt-3 lg:text-2xl">
                 {{ staffDetails.first_name }} {{ staffDetails.last_name }}
-              </h2>
+              </strong>
               <div class="w-full">
-                <strong>Position: </strong>
                 {{ staffDetails.position }}
               </div>
             </div>
-            <div class="md:w-2/3 mb-8 px-3">
-
-              <div class="flex">
-                <div class="md:w-6/12">
+            <div class="lg:w-2/3 md:w-full lg:mx-3 md:mx-3 mx-5">
+              <div class="lg:flex md:flex gap-3 lg:mb-3 md:mb-2 mb-2">
+                <div class="lg:w-6/12 md:w-[60%] whitespace-normal break-all">
                   <strong>Email</strong><br/>                
                   {{ staffDetails.email }}
                 </div>
-              </div>
-              <div class="flex mt-3">
-                <div class="md:w-6/12 ">
+                <div class="lg:w-6/12">
                   <strong>Phone</strong><br/>               
                   {{ staffDetails.phone }}
                 </div>
               </div>
-              <div class="flex mt-3">
-                <div class="md:w-6/12">
+              <div class="lg:flex md:flex gap-3 lg:mb-3 md:mb-2 mb-2">
+                <div class="lg:w-6/12 md:w-[60%] whitespace-normal break-all ">
                   <strong>Department</strong><br/>        
                   {{ staffDetails.department }}
                 </div>
-                <div class="md:w-6/12">
+                <div class="lg:w-6/12">
                   <strong>Working Days</strong><br/>             
                   {{ staffDetails.start_date }} to {{ staffDetails.end_date }}
                 </div>
               </div>
-              <div class="md:w-6/8">
+              <div class="md:w-6/8 mb-5">
                 <strong>About staff</strong><br/>
                 {{ staffDetails.about }}
               </div>

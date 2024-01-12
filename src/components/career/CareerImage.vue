@@ -1,48 +1,15 @@
 <template>
-  <div class="w-full">
-    <div class="relative transition-all w-full duration-300 cursor-pointer">
-      <img :src="require(`../../assets/slideshow/slide4.png`)" class="w-full h-full min-h-0 object-cover" alt="">
-      <div class="absolute font-bold text-3xl text-white mb-1 md:text-3xl text-center md:mb-3 lg:bottom-44 md:bottom-24 bottom-10 mx-4 md:mx-40">
-        <p class="text-sm md:text-xl lg:text-4xl mx-10 lg:mx-20 md:mx-10">
-          Do you want to get notified when a new component is added to Flowbite?
-        </p>
+  <div class="relative h-56 overflow-hidden md:h-96">
+    <img :src="require(`../../assets/slideshow/slide6.png`)" class="w-full h-full object-cover" alt="">
+    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+    <span class="absolute text-white inset-0 flex items-center mx-5">
+      <div class="font-bold text-center md:block md:text-center">
+        <p class="md:text-4xl lg:text-5xl">After you finish two years program from PNC, You can become to</p>
       </div>
-    </div>
+    </span>
   </div>
 </template>
 
 <script>
-export default {
-
-}
+export default {}
 </script>
-
-<style>
-/* Tailwind CSS responsive classes */
-@media (max-width: 639px) {
-  /* Small screens (mobile) - 1 column */
-  .bg-002 {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (min-width: 640px) and (max-width: 767px) {
-  /* Medium screens (landscape phones) - 1 column */
-  .bg-002 {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (min-width: 768px) {
-  /* Medium screens (tablets) - 2 columns */
-  .bg-002 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .figcaption {
-    grid-column: span 2; /* Make the caption span two columns on tablets */
-  }
-}
-
-/* Add more media queries for larger screens if needed */
-</style>

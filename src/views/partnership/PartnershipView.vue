@@ -1,6 +1,6 @@
 <template>
-  <div class="name text-center p-5 text-3xl font-bold">
-    <h1 class="text-bold">Our partnership</h1>
+  <div class="text-center py-5 px-5 lg:text-3xl md:text-2xl text-2xl font-bold">
+    Our partnership
   </div>
   <CardComponent :items="itemsArray" />
 </template>
@@ -28,7 +28,3 @@ export default {
   },
 }
 </script>
-
-<style>
-
-</style>

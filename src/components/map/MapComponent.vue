@@ -1,5 +1,5 @@
 <template>
-    <div class="sbg mt-10 md:mx-20 mx-10 mt-10">
+    <div class="sbg mt-10 lg:mx-20 md:mx-10 mx-5 mt-10">
         <span class="md:text-3xl lg:text-4xl text-lg font-bold ">Campus Map</span><br>
         <!-- button filter each floor  -->
         <div class="flex flex-wrap md:justify-start mb-5">

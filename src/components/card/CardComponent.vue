@@ -1,12 +1,12 @@
 <template>
-  <div class="lg:w-72 md:w-80 w-full h-96 my-2">
+  <div class="lg:w-72 md:w-80 w-full my-2">
     <!-- img, title and desc -->
     <div>
       <span v-for="(image, index) in card.images" :key="index"></span>
       <img v-if="card.images" :src="card.images[0]" alt="Card Image" class="mb-3 w-full lg:h-52 h-60 object-cover object-center"/>
     </div>
-    <p class="font-bold text-xl">{{ card.title }}</p>
-    <p class="text-gray-700 text-base">{{ truncateDescription(card.description) }}</p>
+    <p class="font-bold md:text-xl text-lg">{{ card.title }}</p>
+    <p class="text-gray-700 text-base h-16">{{ truncateDescription(card.description) }}</p>
     <!-- Read more  -->
     <span @click="showDialog" class="text-blue-500 flex items-center cursor-pointer mt-3">
       Read more
@@ -34,7 +34,7 @@
   <div class="dialog fixed lg:top-5 lg:right-0 lg:left-0 md:top-20 md:right-0 md:left-0 top-20 right-0 left-0 z-50  m-auto shadow lg:w-8/12 rounded-lg">
     <div class="relative">
       <!-- Modal content -->
-      <div v-if="dialogView" id="popup-modal" tabindex="-1" class="relative bg-white dark:bg-gray-700 animate-zoom-in rounded-lg">
+      <div v-if="dialogView" id="popup-modal" tabindex="-1" class="relative bg-white dark:bg-gray-700 animate-zoom-in rounded-lg border border-2">
         <!-- Modal header -->
         <div class="flex items-center justify-between md:p-5 border-b dark:border-gray-600 sticky top-0">
           <span class="w-9/12 lg:pl-0 md:pl-0 pl-3">
@@ -97,8 +97,8 @@ export default {
   methods: {
     // lease text 
     truncateDescription(description) {
-      if (description.length > 110 && !this.showFullDescription) {
-        return description.slice(0, 110) + ' ' + '...';
+      if (description.length > 100 && !this.showFullDescription) {
+        return description.slice(0, 100) + ' ' + '...';
       }
       return description;
     },

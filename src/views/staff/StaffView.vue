@@ -1,5 +1,5 @@
 <template>
-  <div class="md:mx-20 mx-10">
+  <div class="lg:mx-20 md:mx-10 mx-5 mt-5">
     <span class="md:text-3xl lg:text-4xl text-lg font-bold">
       Our staffs in each department
     </span>
@@ -18,7 +18,7 @@
     </div>
 
     <!-- loop for staff in each department name  -->
-    <div class="flex flex-wrap lg:gap-3 md:gap-5">
+    <div class="flex flex-wrap gap-3">
       <StaffComponent 
         v-for="(staff, index) in filteredStaffs" 
         :key="index" 

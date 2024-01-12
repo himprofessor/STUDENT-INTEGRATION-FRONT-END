@@ -1,19 +1,19 @@
 <template>
-  <div class="footer bg-003">
-      <div class="group-card p-5 ml-5 mr-5 md:mt-20">
-          <h1 class="flex justify-center text-xl text-white text-center font-bold mb-5">
-              Student's activity
-          </h1>
-          <div class="card mx-10 bg-white gap-5 p-5 flex flex-wrap rounded-md">
-              <FooterCardComponent
-                  v-for="(card, index) in cards"
-                  :key="index"
-                  :card="card"
-                  :readMore="readMore"
-              />
-          </div>
-      </div>
-      <FooterComponent/>
+  <div class="bg-003 mt-5">
+    <div class="header">
+      <h1 class="py-3 flex justify-center text-xl text-white text-center font-bold">
+        Student's activity
+      </h1>
+    </div>
+    <div class="lg:mx-20 md:mx-10 mx-5 bg-white flex flex-wrap rounded-md gap-5 px-5 py-5">
+      <FooterCardComponent
+        v-for="(card, index) in cards"
+        :key="index"
+        :card="card"
+        :readMore="readMore"
+      />
+    </div>
+    <FooterComponent/>
   </div>
 </template>
 <script>
@@ -44,8 +44,6 @@ export default {
 
           // Display only the first three cards
           this.cards = this.cards.slice(0, 3);
-
-          console.log(this.cards);
         })
         .catch((error) => {
           console.error("Error fetching data:", error);
@@ -60,43 +58,4 @@ export default {
 
 <style scoped>
 
-.card-grid {
-  width: 31%; /* Adjusted width for desktop screens */
-  margin-left: 1%;
-  margin-right: 1%;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-/* styles for mobile */
-.card-grid {
-  width: 100%;
-  gap: 10px;
-  margin-left: 0%;
-  margin-right: 0%;
-  grid-template-columns: repeat(1, 1fr);
-}
-
-.card-grid  {
-  width: 100%;
-}
-
-/* Tablet styles */
-@media screen and (min-width: 600px) {
-  .card-grid {
-    width: 47%;
-    margin-left: 1%;
-    margin-right: 0%;
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Desktop styles */
-@media screen and (min-width: 1024px) {
-  .card-grid {
-    width: 30%; /* Adjusted width for three columns on desktop */
-    margin-left: 1%;
-    margin-right: 1%;
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
 </style>

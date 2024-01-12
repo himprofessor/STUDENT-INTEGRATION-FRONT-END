@@ -1,14 +1,12 @@
 <template>
-    <div>
-      <h1 class="text-2xl font-bold mb-4">Slideshow View</h1>
-      <slideshow-component :slides="slides"></slideshow-component>
-    </div>
-  </template>
+  <div>
+    <slideshow-component :slides="slides"></slideshow-component>
+  </div>
+</template>
   
-  <script>
+<script>
   import SlideshowComponent from "@/components/slideshow/SlideshowComponent.vue";
   import http from "@/http-common";
-  
   export default {
     components: {
       SlideshowComponent
@@ -32,5 +30,4 @@
       this.fetchSlides();
     },
   };
-  </script>
-  
+</script>
