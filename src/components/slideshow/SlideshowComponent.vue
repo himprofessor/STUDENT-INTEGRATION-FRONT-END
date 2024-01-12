@@ -25,7 +25,7 @@
         <span class="sr-only">Previous</span>
       </button>
       <!-- indicators -->
-      <button v-for="(slide, index) in slides" :key="index" type="button" class="w-3 h-3 rounded-full bg-white bg-opacity-30" :class="{'active':index === currentIndex}" :aria-current="index === currentIndex" :aria-label="`Slide ${index + 1}`" data-carousel-slide-to="index"></button>
+      <button @click="goToSlide(index)" v-for="(slide, index) in slides" :key="index" type="button" class="w-3 h-3 rounded-full bg-white bg-opacity-30" :class="{'active':index === currentIndex}" :aria-current="index === currentIndex" :aria-label="`Slide ${index + 1}`" data-carousel-slide-to="index"></button>
       <!-- next  -->
       <button type="button" @click="nextSlide">
         <svg class="w-4 h-3 text-white dark:text-gray-400 rtl:rotate-180 hidden md:block" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
@@ -54,10 +54,13 @@ export default {
     prevSlide() {
       this.currentIndex = (this.currentIndex - 1 + this.slides.length) % this.slides.length;
     },
+    goToSlide(index) {
+      this.currentIndex = index;
+    },
     startAutomaticSlideshow() {
       setInterval(() => {
         this.nextSlide();
-      }, 5000); // Adjust the interval as needed (5000 milliseconds = 5 seconds)
+      }, 7000); // Adjust the interval as needed (5000 milliseconds = 5 seconds)
     },
   },
   mounted() {

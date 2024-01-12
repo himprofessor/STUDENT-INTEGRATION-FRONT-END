@@ -65,7 +65,7 @@
         <div class="detail p-4 md:p-5 overflow-y-auto overflow-x-hidden">
           <div class="mb-3">
             <span v-for="(image, index) in card.images" :key="index"  v-show="activeIndex === index" class="flex lg:h-96 md:h-96 h-68">
-              <img :src="image" alt="" class="w-full object-cover object-center">
+              <img :src="image" alt="" class="w-full lg:h-full md:h-full h-52 object-cover object-center">
             </span>
           </div>
           <span>
