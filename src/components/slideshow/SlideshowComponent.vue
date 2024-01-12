@@ -1,8 +1,8 @@
 <!-- src/components/slideshow/SlideshowComponent.vue -->
 <template>
-  <div id="indicators-carousel" class="relative w-full" data-carousel="static">
+  <div id="indicators-carousel" class="relative w-full bg-003" data-carousel="static">
     <!-- Carousel wrapper -->
-    <div class="slides relative h-56 overflow-hidden md:h-96 mt-28">
+    <div class="slides relative h-56 overflow-hidden md:h-96">
       <!-- Slides -->
       <div v-for="(slide, index) in slides" :key="index" :class="{'opacity-100': index === currentIndex, 'opacity-0': index !== currentIndex, 'transition-opacity': true,}" data-carousel-item :aria-current="index === currentIndex" :aria-label="`Slide ${index + 1}`">
         <img :src="slide.image" class="absolute block w-full h-full object-cover" alt="..."/>
