@@ -5,7 +5,7 @@
   >
     <div class="relative">
       <!-- Modal content -->
-      <div v-if="staffDetails" id="popup-modal" tabindex="-1" class="relative bg-white dark:bg-gray-700 rounded-lg w-70" >
+      <div v-if="staffDetails" id="popup-modal" tabindex="-1" class="relative bg-white dark:bg-gray-700 rounded-lg lg:w-[650px] md:w-[680px] lg:ml-28 md:ml-20" >
         <!-- Modal header -->
         <button @click="closeDialog" type="button" class="absolute top-3 end-2.5 text-dark text-sm w-8 h-8 ms-auto inline-flex justify-center items-center" data-modal-hide="popup-modal" >
           <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
@@ -20,7 +20,7 @@
             <img
               :src="staffDetails.media_id"
               alt="Staff Image"
-              class="w-24 h-24 rounded-full mx-auto lg:mt-0 md:mt-0 "
+              class="w-20 h-20 rounded-full mx-auto lg:mt-0 md:mt-0 "
             />
             <strong class="mt-3 lg:text-2xl uppercase">
               {{ staffDetails.first_name }} {{ staffDetails.last_name }}
@@ -29,9 +29,9 @@
               {{ staffDetails.position }}
             </div>
           </div>
-          <div class="card bg-gray-200 lg:flex justify-center lg:mx-12 rounded-lg">           
-            <div class="lg:w-2/2 lg:mb-5 md:w-full md:mx-5 mx-5 ">
-              <div class="mt-4 md:flex gap-3 lg:mb-3 md:mb-2 mb-2">
+          <div class="card bg-gray-100 lg:flex justify-center mx-5 rounded-lg mb-5">           
+            <div class="lg:w-2/2 md:w-full mx-5 py-2 md:h-auto">
+              <div class="md:flex gap-3 mb-4">
                 <div class="lg:w-6/12 md:w-[60%] whitespace-normal break-all">
                   <strong>Email :</strong>             
                   {{ staffDetails.email }}
@@ -42,7 +42,7 @@
                 </div>
               </div>
               <div class="lg:flex md:flex gap-3 lg:mb-3 md:mb-2">
-                <div class="lg:w-6/12 md:w-[60%]  break-all">
+                <div class="lg:w-6/12 md:w-[60%] break-all">
                   <strong>Department :</strong>       
                   {{ staffDetails.department }}
                 </div>
@@ -51,7 +51,8 @@
                   {{ staffDetails.start_date }} to {{ staffDetails.end_date }}
                 </div>
               </div>
-              <div class="md:w-6/8 mb-5">
+      
+              <div class="lg:w-6/8 mb-4 md:w-[96%]">
                 <strong>About staff</strong><br/>
                 {{ staffDetails.about }}
               </div>
