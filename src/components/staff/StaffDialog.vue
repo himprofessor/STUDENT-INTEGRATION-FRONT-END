@@ -30,7 +30,7 @@
             </div>
           </div>
           <div class="card bg-gray-100 lg:flex justify-center mx-5 rounded-lg mb-5">           
-            <div class="lg:w-2/2 md:w-full mx-5 py-2 md:h-auto">
+            <div class="lg:w-2/2 md:w-full mx-5 py-3 pt-3 md:h-auto">
               <div class="md:flex gap-3 mb-4">
                 <div class="lg:w-6/12 md:w-[60%] whitespace-normal break-all">
                   <strong>Email :</strong>             
