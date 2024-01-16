@@ -5,65 +5,54 @@
   >
     <div class="relative">
       <!-- Modal content -->
-      <div v-if="staffDetails" id="popup-modal" tabindex="-1" class="relative bg-white dark:bg-gray-700 rounded-lg w-70" >
+      <div v-if="staffDetails" id="popup-modal" tabindex="-1" class="relative bg-white dark:bg-gray-700 rounded-lg lg:w-[650px] md:w-[680px] lg:ml-28 md:ml-20" >
         <!-- Modal header -->
-        <div class="lg:mx-5 md:mx-5 mx-5 flex items-center justify-between border-b dark:border-gray-600 sticky top-0">
-          <span class="w-9/12 lg:my-3 md:my-2 my-2">
-            <span class="lg:text-2xl md:text-xl text-sm font-semibold">Detail Information Staff</span>   
-          </span>
-          <button
-            @click="closeDialog"
-            class="text-gray-500 "
-          >
-            <svg  class="h-5 w-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" >     
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
-              />
-            </svg>
-          </button>
-        </div>
+        <button @click="closeDialog" type="button" class="absolute top-3 end-2.5 text-dark text-sm w-8 h-8 ms-auto inline-flex justify-center items-center" data-modal-hide="popup-modal" >
+          <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+          </svg>
+          <span class="sr-only">Close modal</span>
+        </button>
+        
         <!-- //Model body-->
-        <div class="modal-body lg:border-r md:border-b">
-          <div class="lg:flex md:flex md:mt-5 lg:h-[370px] md:h-[350px] h-[450px] overflow-y-auto overflow-x-hidden lg:mb-5 md:mb-4 mb-5">    
-            <div class="lg:w-[27%] md:w-1/3 text-center mb-4 border-r-2">
-              <img
-                :src="staffDetails.media_id"
-                alt="Staff Image"
-                class="w-24 h-24 rounded-full mx-auto lg:mt-0 md:mt-0 "
-              />
-              <strong class="mt-3 lg:text-2xl">
-                {{ staffDetails.first_name }} {{ staffDetails.last_name }}
-              </strong>
-              <div class="w-full">
-                {{ staffDetails.position }}
-              </div>
+        <div class="md:mt-5 lg:h-[400px] md:h-[400px] h-[450px] overflow-y-auto overflow-x-hidden lg:mb-5 md:mb-4 mb-5">    
+          <div class="text-center mb-4 mt-8">
+            <img
+              :src="staffDetails.media_id"
+              alt="Staff Image"
+              class="w-20 h-20 rounded-full mx-auto lg:mt-0 md:mt-0 "
+            />
+            <strong class="mt-3 lg:text-2xl uppercase">
+              {{ staffDetails.first_name }} {{ staffDetails.last_name }}
+            </strong>
+            <div class="w-full">
+              {{ staffDetails.position }}
             </div>
-            <div class="lg:w-2/3 md:w-full lg:mx-3 md:mx-3 mx-5">
-              <div class="lg:flex md:flex gap-3 lg:mb-3 md:mb-2 mb-2">
+          </div>
+          <div class="card bg-gray-100 lg:flex justify-center mx-5 rounded-lg mb-5">           
+            <div class="lg:w-2/2 md:w-full mx-5 py-3 pt-3 md:h-auto">
+              <div class="md:flex gap-3 mb-4">
                 <div class="lg:w-6/12 md:w-[60%] whitespace-normal break-all">
-                  <strong>Email</strong><br/>                
+                  <strong>Email :</strong>             
                   {{ staffDetails.email }}
                 </div>
                 <div class="lg:w-6/12">
-                  <strong>Phone</strong><br/>               
+                  <strong>Phone :</strong>              
                   {{ staffDetails.phone }}
                 </div>
               </div>
-              <div class="lg:flex md:flex gap-3 lg:mb-3 md:mb-2 mb-2">
-                <div class="lg:w-6/12 md:w-[60%] whitespace-normal break-all ">
-                  <strong>Department</strong><br/>        
+              <div class="lg:flex md:flex gap-3 lg:mb-3 md:mb-2">
+                <div class="lg:w-6/12 md:w-[60%] break-all">
+                  <strong>Department :</strong>       
                   {{ staffDetails.department }}
                 </div>
                 <div class="lg:w-6/12">
-                  <strong>Working Days</strong><br/>             
+                  <strong>Working Days :</strong>             
                   {{ staffDetails.start_date }} to {{ staffDetails.end_date }}
                 </div>
               </div>
-              <div class="md:w-6/8 mb-5">
+      
+              <div class="lg:w-6/8 mb-4 md:w-[96%]">
                 <strong>About staff</strong><br/>
                 {{ staffDetails.about }}
               </div>
