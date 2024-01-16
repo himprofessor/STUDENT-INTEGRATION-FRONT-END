@@ -9,8 +9,8 @@
             <button @click="showFloor('third')" type="button" :class="{'fiter mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2 lg:w-40': true, 'bg-002': currentFloor === 'third'}">Third Floor</button>
         </div>
 
-        <!-- ground floor  -->
         <svg  width="1094" height="906" viewBox="0 0 1094 906" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- ground floor  -->
             <g @mousemove="showTooltip" @mouseleave="hideTooltip" v-if="currentFloor === 'ground'" fill="none">
                 <GroundFloor/>
             </g>
@@ -32,9 +32,9 @@
         </svg>
 
         <!-- tooltips -->
-        <div class="description" :style="tooltipStyle" v-if="isTooltipVisible">
-            <span class="title">{{ tooltipContent }}</span><br />
-            <span class="desc">{{ tooltipDesc }}</span>
+        <div class="description absolute text-textA lg:w-[30%] md:w-[30%] w-[70%] bg-white py-2 px-2 z-5 shadow-2xl border border-1" :style="tooltipStyle" v-if="isTooltipVisible">
+            <span class="title font-bold">{{ tooltipContent }}</span><br />
+            <span class="desc whitespace-normal break-all">{{ tooltipDesc }}</span>
         </div>
     </div>
 </template>
@@ -96,23 +96,11 @@ export default {
     .description.active {
         display: block;
     }
-    .description .title{
-        font-weight: bold;
-    }
     .description {
         pointer-events: none;
-        position: absolute;
-        font-size: 18px;
         text-align: center;
-        padding: 10px 15px;
-        z-index: 5;
-        height: auto;
         line-height: 1.4;
-        margin: 0 auto;
-        color: #009DE1;
         border-radius: 5px;
-        background-color: white;
-        box-shadow: 0 0 0 1px #eee;
         transform: translate(-50%, -130%);
         display: none;
         white-space: nowrap;
