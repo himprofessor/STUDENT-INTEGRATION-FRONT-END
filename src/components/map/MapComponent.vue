@@ -21,11 +21,13 @@
             </g>
 
             <!-- second floor  -->
-            <g @mousemove="showTooltip" @mouseleave="hideTooltip" v-if="currentFloor === 'first'">
+            <g @mousemove="showTooltip" @mouseleave="hideTooltip" v-if="currentFloor === 'second'">
+                <SecondFloor/>
             </g>
 
             <!-- top floor  -->
-            <g @mousemove="showTooltip" @mouseleave="hideTooltip" v-if="currentFloor === 'first'">
+            <g @mousemove="showTooltip" @mouseleave="hideTooltip" v-if="currentFloor === 'third'">
+                <TopFloor/>
             </g>
         </svg>
 
@@ -40,10 +42,14 @@
 <script>
 import FirstFloor from './FirstFloor.vue';
 import GroundFloor from './GroundFloor.vue';
+import SecondFloor from './SecondFloor.vue';
+import TopFloor from './TopFloor.vue';
 export default {
     components:{
         FirstFloor, 
         GroundFloor,
+        SecondFloor,
+        TopFloor,
     },
     data() {
         return {
