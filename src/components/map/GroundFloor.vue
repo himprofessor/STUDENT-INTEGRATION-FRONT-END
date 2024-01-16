@@ -8,7 +8,7 @@
     <rect class="enabled" data-title="B05" data-description="This is the description about B05" x="0.999624" y="-1.00046" width="425.912" height="296.011" transform="matrix(-0.000375414 -1 1 -0.000458546 2.1611 428.959)" fill="#FF9933" stroke="white" stroke-width="2"/>
     <path class="enabled" data-title="Girl restroom" data-description="This is the description about girl restroom" d="M348.197 206.631L299.011 206.63L299.011 1.92037L398.711 1.87001L398.711 206.631L348.197 206.631Z" fill="#FF9933" stroke="white" stroke-width="2"/>
     <rect class="enabled" data-title="Word of friends" data-description="This is the description about word of friends" x="0.999566" y="-1.0004" width="220.414" height="140.686" transform="matrix(-0.000433886 -1 1 -0.00039675 299.906 429.191)" fill="#FF9933" stroke="white" stroke-width="2"/>
-    <rect class="enabled" data-title="Meterail room" data-description="This kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkis the description about meterail room" x="0.999566" y="-1.0004" width="220.414" height="140.831" transform="matrix(-0.000433886 -1 1 -0.00039675 441.167 429.1)" fill="#FF9933" stroke="white" stroke-width="2"/>
+    <rect class="enabled" data-title="Meterail room" data-description="This is the description about meterail room" x="0.999566" y="-1.0004" width="220.414" height="140.831" transform="matrix(-0.000433886 -1 1 -0.00039675 441.167 429.1)" fill="#FF9933" stroke="white" stroke-width="2"/>
     <rect class="enabled" data-title="Canteen" data-description="This is the description about canteen" x="0.999624" y="-1.00046" width="425.789" height="339.98" transform="matrix(-0.000375749 -1 1 -0.000458136 681.235 428.499)" fill="#FF9933" stroke="white" stroke-width="2"/>
     <rect class="enabled" data-title="boy restroom" data-description="This is the description about boy restroom" x="0.999624" y="-1.00046" width="204.901" height="91.976" transform="matrix(-0.000375414 -1 1 -0.000458546 401.781 207.765)" fill="#FF9933" stroke="white" stroke-width="2"/>
     <rect class="enabled" data-title="Storage room" data-description="This is the description about storage room" x="0.999659" y="-1.00051" width="204.573" height="89.004" transform="matrix(-0.000340776 -1 1 -0.000505154 493.247 207.395)" fill="#FF9933" stroke="white" stroke-width="2"/>
@@ -54,7 +54,7 @@
 export default {}
 </script>
 <style scoped>
-    
+
     .enabled, .text, .enabledpark {
         cursor: pointer;
     }
