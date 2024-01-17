@@ -26,6 +26,7 @@ export default {
     InternShipView,
     CurrculumnComponent,
     SubjectComponent,
+
   },
 };
 </script>

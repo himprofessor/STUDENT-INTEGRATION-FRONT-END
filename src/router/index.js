@@ -15,7 +15,14 @@ const routes = [
         path:'/career-opportunity',
         name:'/career-opportunity',
         component: () => import('../views/career-opportunity/Career_Opportunity.vue')
-    }
+    },
+   
+    {
+        path:'/curriculum',
+        name:'/curriculum',
+        component: () => import('../views/curriculum/CurriculumView.vue')
+    },
+ 
 ];
 
 const router = createRouter({
