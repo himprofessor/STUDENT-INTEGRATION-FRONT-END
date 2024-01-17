@@ -25,11 +25,11 @@
         </li>
 
         <!-- Curriculum page-->
-        <li class="block px-4 py-2 text-gray-500 font-serif">
-          <a :class="{ 'text-textA': $route.path === '/curriculum' }" href="#" class="hover:text-gray-400 block text-gray-500" style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">
+        <router-link to="/curriculum" class="block text-gray-500" style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">
+          <li :class="{ 'text-textA': $route.path === '/curriculum' }" class="hover:text-gray-400 block px-4 py-2 text-gray-500">
             Curriculum
-          </a>
-        </li>
+          </li>
+        </router-link>
 
         <!-- department & staff page -->
         <router-link to="/department-staff" class="block text-gray-500" style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">
