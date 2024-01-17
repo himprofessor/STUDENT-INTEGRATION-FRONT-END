@@ -8,6 +8,14 @@
             <button @click="showFloor('second')" type="button" :class="{'fiter mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2 lg:w-40': true, 'bg-002': currentFloor === 'second'}">Second Floor</button>
             <button @click="showFloor('third')" type="button" :class="{'fiter mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2 lg:w-40': true, 'bg-002': currentFloor === 'third'}">Third Floor</button>
         </div>
+        <div class="list-of-compass text-xl mb-10 mx-10">
+            <ul class="list-disc flex gap-20">
+                <li><strong>N:</strong> North direction</li>
+                <li><strong>S:</strong> South direction</li>
+                <li><strong>E:</strong> East direction</li>
+                <li><strong>W:</strong> West direction</li>
+            </ul>
+        </div>
 
         <svg  width="1094" height="906" viewBox="0 0 1094 906" fill="none" xmlns="http://www.w3.org/2000/svg">
             <!-- ground floor  -->
