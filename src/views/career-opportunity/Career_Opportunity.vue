@@ -1,7 +1,7 @@
 <template>
   <CareerImage/>
   <div>
-    <h1 class="font-bold mt-10 text-lg mx-5 lg:mx-24 md:mx-10">
+    <h1 class="font-bold my-5 lg:text-3xl md:text-4xl text-xl lg:mx-20 md:mx-10 mx-5">
       Jobs list below:
     </h1>
     <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 lg:mx-20 md:mx-10 mx-5">
@@ -33,17 +33,16 @@ export default {
     this.fetchData();
   },
   methods: {
-      fetchData() {
-  http
-    .get("api/career/list")
-    .then((response) => {
-      this.careers = response.data.data;
-      console.log(this.careers); // Log the data to the console
-    })
-    .catch((error) => {
-      console.error("Error fetching data:", error);
-    });
-},
+    fetchData() {
+      http
+      .get("api/career/list")
+      .then((response) => {
+        this.careers = response.data.data;
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
     },
-  };
-  </script>
+  },
+};
+</script>
