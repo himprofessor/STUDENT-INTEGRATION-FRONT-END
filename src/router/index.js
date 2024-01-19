@@ -22,6 +22,12 @@ const routes = [
         name:'/curriculum',
         component: () => import('../views/curriculum/CurriculumView.vue')
     },
+    
+    {
+        path:'/student_activity',
+        name:'/student_activity',
+        component: () => import('../views/student_activity/Student_Activity.vue')
+    },
  
 ];
 
