@@ -8,7 +8,7 @@
     <p class="font-bold md:text-xl text-lg">{{ card.title }}</p>
     <p class="text-gray-700 text-base h-16">{{ truncateDescription(card.description) }}</p>
     <!-- Read more  -->
-    <span @click="showDialog" class="text-blue-500 flex items-center cursor-pointer mt-3">
+    <span @click="showDialog" class="text-blue-500 flex items-center cursor-pointer mt-3 hover:bg-blue-100 w-32 p-1 rounded">
       Read more
       <svg class="w-6 h-3 text-blue-400 dark:text-white ml-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
@@ -109,7 +109,7 @@ export default {
     hideDialog() {
       this.dialogView = false;
     },
-    // read more show from one to one
+    // show from one to one image
     startSlideshow() {
       setInterval(() => {
         this.activeIndex = (this.activeIndex + 1) % this.card.images.length;
