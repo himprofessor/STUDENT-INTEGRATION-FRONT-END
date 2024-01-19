@@ -1,9 +1,7 @@
 <template>
-    <!-- <div class="mt-0"> -->
-        <DepartmentView />
-        <StaffView />
-        <MapComponent />
-    <!-- </div> -->
+    <DepartmentView />
+    <StaffView />
+    <MapComponent />
 </template>
 
 <script>
