@@ -1,23 +1,25 @@
 <template>
-    <div class="mt-10 md:mx-20 mx-10 mb-10">
+    <div class="mt-10 lg:mx-20 md:mx-10 mx-5">
         <span class="md:text-3xl lg:text-4xl text-lg font-bold ">Campus Map</span><br>
         <!-- button filter each floor  -->
-        <div class="flex flex-wrap md:justify-start mb-10">
+        <div class="flex flex-wrap md:justify-start mb-5">
             <button @click="showFloor('ground')" type="button" :class="{'fiter mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2 lg:w-40': true, 'bg-002': currentFloor === 'ground'}">Ground Floor</button>
             <button @click="showFloor('first')" type="button" :class="{'fiter mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2 lg:w-40': true, 'bg-002': currentFloor === 'first'}">First Floor</button>
             <button @click="showFloor('second')" type="button" :class="{'fiter mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2 lg:w-40': true, 'bg-002': currentFloor === 'second'}">Second Floor</button>
             <button @click="showFloor('third')" type="button" :class="{'fiter mt-5 focus:outline-none font-sm rounded-full text-sm px-5 py-2.5 text-center me-2 lg:w-40': true, 'bg-002': currentFloor === 'third'}">Third Floor</button>
         </div>
-        <div class="list-of-compass text-xl mb-10 mx-10">
-            <ul class="list-disc flex gap-20">
+        <div class="list-of-compass lg:text-xl md:text-lg text-sm mx-5 mb-5">
+            <ul class="list-disc flex flex-col md:flex-row lg:gap-20 md:gap-10">
                 <li><strong>N:</strong> North direction</li>
                 <li><strong>S:</strong> South direction</li>
                 <li><strong>E:</strong> East direction</li>
                 <li><strong>W:</strong> West direction</li>
             </ul>
         </div>
-
-        <svg  width="1094" height="906" viewBox="0 0 1094 906" fill="none" xmlns="http://www.w3.org/2000/svg">
+    </div>
+    
+    <div class="lg:mx-20 md:mx-10 mx-0">
+        <svg class="svg" width="1094" height="906" viewBox="0 0 1094 906" fill="none" xmlns="http://www.w3.org/2000/svg">
             <!-- ground floor  -->
             <g @mousemove="showTooltip" @mouseleave="hideTooltip" v-if="currentFloor === 'ground'" fill="none">
                 <GroundFloor/>
@@ -128,5 +130,12 @@ export default {
     }
     .fiter{
         border: 1px solid gray;
+    }
+    @media (min-width: 360px) {
+        /* Styles for mobile devices */
+        .svg {
+            height: 10%;
+            width: 100%;
+        }
     }
 </style>
