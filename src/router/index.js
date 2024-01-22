@@ -28,6 +28,11 @@ const routes = [
         name:'/student_activity',
         component: () => import('../views/student_activity/Student_Activity.vue')
     },
+    {
+        path:'/news_update',
+        name:'/news_update',
+        component: () => import('../views/news_update/News_Update.vue')
+    },
  
 ];
 
