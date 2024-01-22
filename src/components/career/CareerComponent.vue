@@ -17,7 +17,7 @@
     </div>
   </div>
   <!-- dialog  -->
-  <div class="dialog fixed lg:top-5 lg:right-0 lg:left-0 md:top-20 md:right-0 md:left-0 top-20 right-0 left-0 z-50  m-auto shadow lg:w-8/12 rounded-lg">
+  <div class="dialog fixed lg:top-5 lg:right-0 lg:left-0 md:top-20 md:right-0 md:left-0 top-20 right-0 left-0 z-50  m-auto shadow lg:w-7/12 rounded-lg">
     <div class="relative">
       <!-- Modal content -->
       <div v-if="dialogView" id="popup-modal" tabindex="-1" class="relative bg-white dark:bg-gray-700 rounded-lg border border-2">
@@ -36,8 +36,8 @@
         <!-- Modal body -->
         <div class="detail md:p-5 overflow-y-auto overflow-x-hidden h-[450px] lg:mx-0 md:mx-0 mx-5">
           <div class="mb-3 lg:mt-0 md:mt-0 mt-5">
-            <span class="flex lg:h-96 md:h-96 h-68">
-              <img :src="career.media_id" alt="" class="w-full lg:h-full md:h-full object-cover object-center">
+            <span class="flex">
+              <img :src="career.media_id" alt="" class="w-full lg:h-80 md:h-full object-cover object-center">
             </span>
           </div>
           <span>

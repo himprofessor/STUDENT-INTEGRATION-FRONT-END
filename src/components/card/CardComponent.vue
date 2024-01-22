@@ -31,7 +31,7 @@
     </div>
   </div>
   <!-- dialog -->
-  <div class="dialog fixed lg:top-5 lg:right-0 lg:left-0 md:top-20 md:right-0 md:left-0 top-20 right-0 left-0 z-50  m-auto shadow lg:w-8/12 rounded-lg">
+  <div class="dialog fixed lg:top-10 lg:right-0 lg:left-0 md:top-20 md:right-0 md:left-0 top-20 right-0 left-0 z-50  m-auto shadow lg:w-7/12 rounded-lg">
     <div class="relative">
       <!-- Modal content -->
       <div v-if="dialogView" id="popup-modal" tabindex="-1" class="relative bg-white dark:bg-gray-700 animate-zoom-in rounded-lg border border-2">
@@ -62,10 +62,10 @@
           </button>
         </div>
         <!-- Modal body -->
-        <div class="detail p-4 md:p-5 overflow-y-auto overflow-x-hidden">
+         <div class="detail p-4 md:p-5 overflow-y-auto overflow-x-hidden lg:max-h-96">
           <div class="mb-3">
-            <span v-for="(image, index) in card.images" :key="index"  v-show="activeIndex === index" class="flex lg:h-96 md:h-96 h-68">
-              <img :src="image" alt="" class="w-full lg:h-full md:h-full h-52 object-cover object-center">
+            <span v-for="(image, index) in card.images" :key="index"  v-show="activeIndex === index" class="flex">
+              <img :src="image" alt="" class="w-full lg:h-80 md:h-full h-52 object-cover object-center">
             </span>
           </div>
           <span>
