@@ -49,9 +49,6 @@
             </button>
 
             <div class="dropdown-content absolute hidden bg-gray-50 text-black group-hover:block w-48 font-serif z-10 border-blue-400 border-t-2">
-              <!-- <a href="/student_activity" class="hover:text-textA block px-3 py-2 text-gray-500" style=" font-size: 14px; font-family: 'Kantumruy Pro', sans-serif;">
-                Student Activity
-              </a> -->
               <router-link to="/student_activity" class="block text-gray-500" style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">
                 <li :class="{ 'text-textA': $route.path === '/student_activity' }" class="hover:text-gray-400 block px-4 py-2 text-gray-500">
                   Student Activity
@@ -76,6 +73,12 @@
             Career Opportunity
           </li>
         </router-link>
+        <!-- News/Update page-->
+        <router-link to="/news_update" class="block text-gray-500" style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">
+          <li :class="{ 'text-textA': $route.path === '/news_update' }" class="hover:text-gray-400 block px-4  md:ml-4 py-2 text-gray-500">
+            News/Update
+          </li>
+        </router-link>        
       </ul>
     </nav>
   </div>
