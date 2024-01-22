@@ -17,32 +17,24 @@
     </div>
   </div>
   <!-- dialog  -->
-  <div class="dialog fixed lg:top-5 lg:right-0 lg:left-0 md:top-20 md:right-0 md:left-0 top-20 right-0 left-0 z-50  m-auto shadow lg:w-7/12 rounded-lg">
+  <div class="dialog fixed lg:top-0 right-0 left-0 top-10 right-0 left-0 z-50 m-auto lg:w-5/12 md:w-10/12 w-11/12 rounded">
     <div class="relative">
       <!-- Modal content -->
-      <div v-if="dialogView" id="popup-modal" tabindex="-1" class="relative bg-white dark:bg-gray-700 rounded-lg border border-2">
-        <!-- Modal header -->
-        <div class="flex items-center justify-between lg:py-4 md:py-3 py-3 border-b dark:border-gray-600 sticky top-0">
-          <span class="w-9/12 lg:pl-0 md:pl-0 pl-3">
-            <span class="lg:text-4xl md:text-2xl text-xl lg:ml-5 md:ml-5 ml-3 font-semibold">{{ career.title }}</span>
+      <div v-if="dialogView" id="popup-modal" tabindex="-1" class="relative bg-white dark:bg-gray-700 animate-zoom-in rounded border border-gray-200">
+        <div class="overflow-y-auto overflow-x-hidden lg:max-h-[580px] md:max-h-[880px] max-h-[580px]">
+          <span class="flex relative sticky top-0">
+            <button @click="hideDialog" type="button" class="bg-black bg-opacity-50 rounded-full absolute top-2 end-3 text-white text-sm lg:w-8 lg:h-8 md:w-10 md:h-10 w-10 h-10 ms-auto inline-flex justify-center items-center" data-modal-hide="popup-modal">
+              <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+              </svg>
+              <span class="sr-only">Close modal</span>
+            </button>
+            <img :src="career.media_id" alt="" class="w-full lg:h-80 md:h-96 h-60 object-cover object-center rounded-t-sm">
           </span>
-          <button @click="hideDialog" type="button" class="absolute top-3 end-2.5 text-dark text-sm w-8 h-8 ms-auto inline-flex justify-center items-center" data-modal-hide="popup-modal" >
-            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-            </svg>
-            <span class="sr-only">Close modal</span>
-          </button>
-        </div>
-        <!-- Modal body -->
-        <div class="detail md:p-5 overflow-y-auto overflow-x-hidden h-[450px] lg:mx-0 md:mx-0 mx-5">
-          <div class="mb-3 lg:mt-0 md:mt-0 mt-5">
-            <span class="flex">
-              <img :src="career.media_id" alt="" class="w-full lg:h-80 md:h-full object-cover object-center">
-            </span>
+          <div class="lg:px-3 md:px-5 px-5 my-3">
+            <span class="lg:text-lg md:text-3xl text-lg font-semibold">{{ career.title }}</span><br>
+            <span class="lg:text-sm md:text-xl text-sm">{{ career.description }} </span>
           </div>
-          <span>
-            {{ career.description }}
-          </span>
         </div>
       </div>
     </div>
