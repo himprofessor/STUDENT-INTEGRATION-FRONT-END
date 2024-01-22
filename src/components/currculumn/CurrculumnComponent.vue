@@ -36,9 +36,9 @@ export default {
     data(){
         return{
             currculums:[
-                {image:"1.png", title:"Computer science", description:"With 16 major islands, The Bahamas is an unmatchedBahamas is the country's sheersize and diversity. With 16 major islands, The Bahamas is an unmatchedBahamas is the country's sheersize and diversity. With 16 major islands, The Bahamas is an unmatched destinationThe best kept secret of The Bahamas is the country's sheersize and diversity. With 16 major islands, The Bahamas is an unmatched destination"},
-                {image:"2.png", title:"Mobile Developer", description:"Bahamas is the country's sheersize and diversity. With 16 major islands, The Bahamas is an unmatched destinationThe best kept secret of The Bahamas is the country's sheersize and diversity. With 16 major islands, The Bahamas is an unmatched destinationis an unmatched destination"},
-                {image:"3.png", title:"UX/UI", description:"Bahamas is the country's sheersize and diversity. With 16 major islands, The Bahamas is an unmatched destinationThe best kept secret of The Bahamas is the country's sheersize and diversity. With 16 major islands, The Bahamas is an unmatched destinationis an unmatched destination"}
+                {image:"1.png", title:"Association degree of Computer Science", description:"The Department of Software Engineering aims to graduate world-class super engineers and global leaders by using cutting edge technologies and innovation-centric education to respond to the challenges of an ever-changing world."},
+                {image:"1.png", title:"Association degree of Computer Science", description:"The Department of Software Engineering aims to graduate world-class super engineers and global leaders by using cutting edge technologies and innovation-centric education to respond to the challenges of an ever-changing world."},
+                {image:"1.png", title:"Association degree of Computer Science", description:"The Department of Software Engineering aims to graduate world-class super engineers and global leaders by using cutting edge technologies and innovation-centric education to respond to the challenges of an ever-changing world."}
             ],
             showFullDescription: false,
         }
