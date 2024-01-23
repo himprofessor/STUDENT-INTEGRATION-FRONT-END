@@ -1,5 +1,6 @@
 <template>
-  <div class="lg:mx-20 md:mx-10 mx-5 mt-5">
+<div class="lg:mx-0 md:mx-0 mx-4 md:w-2/2">
+  <div class="lg:mx-20 md:mx-10 mx-5 mg:justify-around mt-5">
     <span class="md:text-3xl lg:text-4xl text-lg font-bold">
       Our staffs in each department
     </span>
@@ -26,6 +27,7 @@
       />
     </div>
   </div>
+</div>
 </template>
 
 <script>

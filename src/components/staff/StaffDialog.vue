@@ -1,7 +1,7 @@
 <template>
   <!-- dialog -->
   <div
-    class="dialog fixed lg:top-10 lg:right-0 lg:left-0 md:top-20 md:right-0 md:left-0 top-20 right-0 left-0 z-50 m-auto shadow lg:w-8/12 rounded-lg lg:mt-5 md:mt-10"
+    class="dialog fixed lg:top-10 lg:right-0 lg:left-0 md:top-20 md:right-0 md:left-0 top-20 right-0 left-0 z-50 m-auto lg:w-8/12 rounded-lg lg:mt-5 md:mt-10"
   >
     <div class="relative">
       <!-- Modal content -->
@@ -29,7 +29,7 @@
               {{ staffDetails.position }}
             </div>
           </div>
-          <div class="card bg-gray-100 lg:flex justify-center mx-5 rounded-lg mb-5">           
+          <div class="card bg-gray-100 lg:flex md:flex justify-center mx-5 rounded-lg mb-5">           
             <div class="lg:w-2/2 md:w-full mx-5 py-3 pt-3 md:h-auto">
               <div class="md:flex gap-3 mb-4">
                 <div class="lg:w-6/12 md:w-[60%] whitespace-normal break-all">
