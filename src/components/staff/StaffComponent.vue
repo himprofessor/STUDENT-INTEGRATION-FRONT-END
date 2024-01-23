@@ -1,5 +1,5 @@
 <template>
-  <div @click="openDialog" class="md:w-2/2 lg:w-72 w-80 pb-5 shadow-md border border-gray-200 rounded-lg my-3 bg-gray-100 cursor-pointer">
+  <div @click="openDialog" class="lg:w-[24%] bg-004 md:w-[49%] w-80 pb-5 shadow-md border border-gray-200 rounded-lg my-3 bg-gray-200 cursor-pointer">
     <!-- department  -->
     <div class="bg-003 rounded-b-lg w-2/4 m-auto p-1">
       <p class="text-center text-white whitespace-normal font-normal text-xs">{{ staff.department }}</p>
