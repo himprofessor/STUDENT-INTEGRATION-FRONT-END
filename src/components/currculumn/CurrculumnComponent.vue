@@ -9,17 +9,20 @@
                 <h3 class="font-bold text-gray-800 md:text-2xl text-lg" >
                     {{currculum.title}}
                 </h3>
-                <p class="md:text-base text-gray-500 text-sm">
+                <!-- <p class="md:text-base text-gray-500 text-sm">
                     {{truncateDescription(currculum.description) }}
-                </p>
-                <span @click="showFullDescription = !showFullDescription" class="text-blue-500 rounded flex items-center cursor-pointer mt-3">
-                    {{ showFullDescription ? 'Read less' : 'Read more' }}
-                    <svg class="h-5 w-5 text-blue-500" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                </p> -->
+                <span>{{ truncateDescription(currculum.description) }}</span>
+                <div class="flex justify-center items-center text-center mb-5" v-if="currculum.description.length > 450">
+                    <span @click="showFullDescription = !showFullDescription" class="text-blue-500 underline underline-offset-4 rounded flex items-center cursor-pointer mt-3">
+                        {{ showFullDescription ? 'Read less' : 'Read more' }}
+                        <svg class="h-4 w-5 text-blue-400" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" />
                         <polyline points="7 7 12 12 7 17" />
                         <polyline points="13 7 18 12 13 17" />
-                    </svg>
-                </span>
+                        </svg>
+                    </span>
+                </div>
             </div>
         </div>
     </div>
@@ -36,21 +39,21 @@ export default {
     data(){
         return{
             currculums:[
-                {image:"1.png", title:"Association degree of Computer Science", description:"The Department of Software Engineering aims to graduate world-class super engineers and global leaders by using cutting edge technologies and innovation-centric education to respond to the challenges of an ever-changing world."},
-                {image:"1.png", title:"Association degree of Computer Science", description:"The Department of Software Engineering aims to graduate world-class super engineers and global leaders by using cutting edge technologies and innovation-centric education to respond to the challenges of an ever-changing world."},
-                {image:"1.png", title:"Association degree of Computer Science", description:"The Department of Software Engineering aims to graduate world-class super engineers and global leaders by using cutting edge technologies and innovation-centric education to respond to the challenges of an ever-changing world."}
+                {image:"1.png", 
+                title:"Association degree of Computer Science", 
+                description:"The Department of Software Engineering aims to graduate world-class super engineers and global leaders by using cutting edge technologies and innovation-centric education to respond to the challenges of an ever-changing world."},
             ],
             showFullDescription: false,
         }
     },
-    methods:{
-        // lease text 
-        truncateDescription(description) {
-            if (description.length > 245 && !this.showFullDescription) {
-                return description.slice(0, 245) + ' ' + '...';
-            }
-            return description;
-        },
-    }
-}
+    methods: {
+    truncateDescription(description) {
+      const maxLength = 450;
+      if (description.length > maxLength && !this.showFullDescription) {
+        return description.slice(0, maxLength) + " ...";
+      }
+      return description;
+    },
+  },
+};
 </script>
