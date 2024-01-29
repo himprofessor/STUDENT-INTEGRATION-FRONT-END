@@ -6,7 +6,7 @@
       <img v-if="card.images" :src="card.images[0]" alt="Card Image" class="mb-3 w-full lg:h-52 h-60 object-cover object-center"/>
     </div>
     <p class="font-bold md:text-xl text-lg">{{ card.title }}</p>
-    <p class="text-gray-700 text-base h-16">{{ truncateDescription(card.description) }}</p>
+    <p v-html="truncateDescription(card.description)"></p>
     <!-- Read more  -->
     <span @click="showDialog" class="text-blue-500 flex items-center cursor-pointer mt-3 hover:bg-blue-100 w-32 p-1 rounded">
       Read more
@@ -50,7 +50,7 @@
           <div class="lg:px-3 md:px-5 lg:px-10 md:px-5 px-5  my-3">
             <span class="lg:text-lg md:text-3xl text-lg font-semibold">{{ card.title }}</span><br>
             <div class="overflow-hidden max-h-300">
-              <span class="lg:text-sm md:text-xl text-sm">{{ card.description }} </span>
+              <span v-html="card.description" class="lg:text-sm md:text-xl text-sm"> </span>
             </div>
             <div class="lg:flex md:flex justify-between mt-1">
               <div class="flex items-center mb-3 md:mb-0 md:mr-4">

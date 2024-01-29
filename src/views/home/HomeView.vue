@@ -1,13 +1,11 @@
 <!-- src\views\home\HomeView.vue -->
 <template>
-  <div>
-    <SlideshowView />
-    <CardView />
-    <CurrculumnComponent />
-    <SubjectComponent/>
-    <InternShipView/>
-    <PartnershipView />
-  </div>
+  <SlideshowView />
+  <CardView />
+  <CurrculumnComponent />
+  <CourseView/>
+  <InternShipView/>
+  <PartnershipView />
 </template>
 
 <script>
@@ -16,7 +14,7 @@ import CardView from '@/views/card/CardView.vue'; // Updated import path
 import SlideshowView from '@/views/slideshow/SlideshowView.vue'; // Updated import path
 import PartnershipView from '../partnership/PartnershipView.vue';
 import CurrculumnComponent from '@/components/currculumn/CurrculumnComponent.vue';
-import SubjectComponent from '@/components/subject/SubjectComponent.vue';
+import CourseView from '@/views/course/CourseView.vue';
 
 export default {
   components: {
@@ -25,8 +23,7 @@ export default {
     PartnershipView,
     InternShipView,
     CurrculumnComponent,
-    SubjectComponent,
-
+    CourseView,
   },
 };
 </script>

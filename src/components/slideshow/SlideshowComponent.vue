@@ -10,7 +10,7 @@
         <span class="absolute text-white inset-20 flex items-center">
           <div class="w-full text-center md:block md:text-start">
             <p v-if="slide.heading || slide.description" class="font-bold md:text-4xl mb-1 lg:text-5xl md:mb-3">{{ slide.heading }}</p>
-            <p class="text-xs md:text-2xl">{{ slide.description }}</p>
+            <p v-html="slide.description" class="text-xs md:text-2xl"></p>
           </div>
         </span>
       </div>

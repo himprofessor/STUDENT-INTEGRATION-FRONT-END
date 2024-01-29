@@ -1,20 +1,20 @@
 <template>
-    <div class="lg:mx-20 md:mx-20 mx-5">
-      <h1 class="lg:text-3xl md:text-3xl text-lg font-bold lg:my-6 md:my-5 my">
-        <a href="new/update">News /update</a>
-      </h1>
-      <div class="flex flex-wrap lg:gap-3 md:gap-5">
-        <CardComponent
-          v-for="(card, index) in cards"
-          :key="index"
-          :card="card"
-          :readMore="readMore"
-        />
-      </div>
+  <div class="lg:mx-20 md:mx-20 mx-5">
+    <h1 class="lg:text-3xl md:text-3xl text-lg font-bold lg:my-6 md:my-5 my">
+      <a href="new/update">News /update</a>
+    </h1>
+    <div class="flex flex-wrap lg:gap-3 md:gap-5">
+      <CardComponent
+        v-for="(card, index) in cards"
+        :key="index"
+        :card="card"
+        :readMore="readMore"
+      />
     </div>
-  </template>
+  </div>
+</template>
   
-  <script>
+<script>
   import CardComponent from "@/components/card/CardComponent.vue";
   import http from "@/http-common"; // Import http-common.js
   
@@ -48,4 +48,4 @@
       },
     },
   };
-  </script>
+</script>

@@ -5,7 +5,7 @@
       <img v-if="card.images" :src="card.images[0]" alt="Card Image" class="object-cover object-center lg:h-64 md:h-56 h-full"/>
     </div>
     <div class="font-bold md:text-xl text-lg">{{ card.title }}</div>
-    <p class="text-gray-700 text-base h-15">{{ truncateDescription(card.description, 100) }}</p>
+    <p v-html="truncateDescription(card.description, 100)" class="text-gray-700 text-base h-15"></p>
     <span @click="showDialog" class="text-blue-500 flex items-center cursor-pointer mt-3 hover:bg-blue-100 w-32 p-1 rounded">
       Read more
       <svg class="w-6 h-3 text-blue-400 dark:text-white ml-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
@@ -29,7 +29,7 @@
       </div>
     </div>
   </div>
-
+  <!-- dialog  -->
   <div class="dialog fixed lg:top-0 right-0 left-0 top-10 right-0 left-0 z-50 m-auto lg:w-5/12 md:w-10/12 w-11/12 rounded">
     <div class="relative">
       <!-- Modal content -->
@@ -49,7 +49,7 @@
           <div class="lg:px-10 md:px-8 px-5 my-3">
             <span class="lg:text-lg md:text-3xl text-lg font-semibold">{{ card.title }}</span><br>
             <div class="overflow-hidden max-h-300">
-              <span class="lg:text-sm md:text-xl text-sm">{{ card.description }} </span>
+              <span v-html="card.description" class="lg:text-sm md:text-xl text-sm"></span>
             </div>
             <div class="lg:flex md:flex justify-between mt-1">
               <div class="flex items-center mb-3 md:mb-0 md:mr-4">
