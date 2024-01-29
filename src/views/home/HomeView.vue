@@ -3,7 +3,7 @@
   <div>
     <SlideshowView />
     <CardView />
-    <CurrculumnComponent />
+    <CurriculumView />
     <SubjectComponent/>
     <InternShipView/>
     <PartnershipView />
@@ -11,22 +11,21 @@
 </template>
 
 <script>
-import InternShipView from '@/views/internship/InternShipView.vue'
-import CardView from '@/views/card/CardView.vue'; // Updated import path
 import SlideshowView from '@/views/slideshow/SlideshowView.vue'; // Updated import path
-import PartnershipView from '../partnership/PartnershipView.vue';
-import CurrculumnComponent from '@/components/currculumn/CurrculumnComponent.vue';
+import CardView from '@/views/card/CardView.vue'; // Updated import path
+import CurriculumView from '../curriculum/CurriculumView.vue';
 import SubjectComponent from '@/components/subject/SubjectComponent.vue';
+import InternShipView from '@/views/internship/InternShipView.vue';
+import PartnershipView from '../partnership/PartnershipView.vue';
 
 export default {
   components: {
     SlideshowView,
     CardView,
+    CurriculumView,
+    SubjectComponent,
     PartnershipView,
     InternShipView,
-    CurrculumnComponent,
-    SubjectComponent,
-
   },
 };
 </script>

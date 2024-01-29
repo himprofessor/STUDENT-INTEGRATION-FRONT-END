@@ -20,7 +20,7 @@ const routes = [
     {
         path:'/curriculum',
         name:'/curriculum',
-        component: () => import('../views/curriculum/CurriculumView.vue')
+        component: () => import('../views/curriculum/CurriculumImport.vue')
     },
     
     {
@@ -33,7 +33,6 @@ const routes = [
         name:'/news_update',
         component: () => import('../views/news_update/News_Update.vue')
     },
- 
 ];
 
 const router = createRouter({
