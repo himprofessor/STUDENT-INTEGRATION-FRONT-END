@@ -7,8 +7,8 @@
     <!-- text content  -->
     <div class="md:w-5/6 bg-white shadow-md flex flex-col space-y-3 lg:px-3 md:px-3 pb-3">
       <span class="lg:text-2xl md:text-xl text-xl font-bold lg:mt-0 md:mt-0 mt-3">{{ career.title }}</span>
-      <span class="text-gray-500">{{ truncateDescription(career.description) }}</span>
-      <span @click="showDialog" class="text-textA flex items-center cursor-pointer hover:bg-blue-100 w-32 rounded p-1">
+      <span v-html="truncateDescription(career.description)" class="text-gray-500"/>
+      <span v-if="career.description.length > 100" @click="showDialog" class="text-textA flex items-center cursor-pointer hover:bg-blue-100 w-32 rounded p-1">
         Read more
         <svg class="w-6 h-3 dark:text-white ml-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
@@ -31,9 +31,9 @@
             </button>
             <img :src="career.media_id" alt="" class="w-full lg:h-80 md:h-96 h-60 object-cover object-center rounded-t-sm">
           </span>
-          <div class="lg:px-3 md:px-5 px-5 my-3">
+          <div class="lg:px-10 md:px-10 px-5 my-3">
             <span class="lg:text-lg md:text-3xl text-lg font-semibold">{{ career.title }}</span><br>
-            <span class="lg:text-sm md:text-xl text-sm">{{ career.description }} </span>
+            <span v-html="career.description" class="lg:text-sm md:text-xl text-sm"/>
           </div>
         </div>
       </div>
@@ -59,8 +59,9 @@ export default {
   methods:{
     // lease text 
     truncateDescription(description) {
-      if (description.length > 90 && !this.showFullDescription) {
-        return description.slice(0, 90) + ' ' + '...';
+      const maxLength = 100;
+      if (description.length > maxLength && !this.showFullDescription) {
+        return description.slice(0, maxLength) + " ...";
       }
       return description;
     },

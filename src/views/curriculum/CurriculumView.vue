@@ -1,6 +1,7 @@
 <template> 
-  <div class="flex flex-col justify-center md:h-full mt-5 ">
-    <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-4 md:mx-10 mx-5">
+  <div class="flex flex-col justify-center md:h-full lg:mx-20 md:mx-10 mx-5 my-5">
+    <h1 class="font-bold lg:text-3xl md:text-4xl text-xl mb-5">Curriculum</h1> 
+    <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-3">
       <CurriculumComponent
         v-for="(curriculum, index) in curriculums"
         :key="index"
@@ -40,5 +41,3 @@ export default {
   },
 }
 </script>
-
- 

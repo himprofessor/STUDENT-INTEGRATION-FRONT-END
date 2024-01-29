@@ -16,13 +16,11 @@ const routes = [
         name:'/career-opportunity',
         component: () => import('../views/career-opportunity/Career_Opportunity.vue')
     },
-   
     {
         path:'/curriculum',
         name:'/curriculum',
         component: () => import('../views/curriculum/CurriculumImport.vue')
     },
-    
     {
         path:'/student_activity',
         name:'/student_activity',

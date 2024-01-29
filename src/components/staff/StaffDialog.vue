@@ -54,7 +54,7 @@
       
               <div class="lg:w-6/8 mb-4 md:w-[96%]">
                 <strong>About staff</strong><br/>
-                {{ staffDetails.about }}
+                <div v-html="staffDetails.about"></div>
               </div>
             </div>
           </div>
