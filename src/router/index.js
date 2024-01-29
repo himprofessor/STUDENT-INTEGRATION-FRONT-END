@@ -16,13 +16,11 @@ const routes = [
         name:'/career-opportunity',
         component: () => import('../views/career-opportunity/Career_Opportunity.vue')
     },
-   
     {
         path:'/curriculum',
         name:'/curriculum',
-        component: () => import('../views/curriculum/CurriculumView.vue')
+        component: () => import('../views/curriculum/CurriculumImport.vue')
     },
-    
     {
         path:'/student_activity',
         name:'/student_activity',
@@ -33,7 +31,6 @@ const routes = [
         name:'/news_update',
         component: () => import('../views/news_update/News_Update.vue')
     },
- 
 ];
 
 const router = createRouter({

@@ -47,7 +47,7 @@
             <img :src="image" alt="" class="w-full lg:h-80 md:h-96 h-60 object-cover object-center rounded-t-sm">
           </span>
           <!-- title desc created at and created by -->
-          <div class="lg:px-3 md:px-5 lg:px-10 md:px-5 px-5  my-3">
+          <div class="lg:px-10 md:px-5 px-5  my-3">
             <span class="lg:text-lg md:text-3xl text-lg font-semibold">{{ card.title }}</span><br>
             <div class="overflow-hidden max-h-300">
               <span v-html="card.description" class="lg:text-sm md:text-xl text-sm"> </span>
