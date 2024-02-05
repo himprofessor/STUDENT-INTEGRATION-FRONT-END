@@ -39,16 +39,10 @@ export default {
 </script>
 
 <style scoped>
-/* //tablets */
-/* .container{
- background: #895d5d;
-} */
 
 @media creen and (min-width: 768){
 .container{
  background: #895d5d;
- 
-  
 }
 }
 </style>

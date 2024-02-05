@@ -18,8 +18,8 @@
                             <td class="border border-gray-400 px-4 py-2 lg:text-lg md:text-lg text-sm">{{ term.term }}</td>
                             <td v-for="(course, index) in courses" :key="index" class="border border-gray-400 px-4 py-2">
                                 <div v-for="(subject, index) in subjects" :key="index">
-                                    <ul v-if="subject.course_name === course.course_name && subject.term_name === term.term && subject.subject_name" class="list-disc lg:ml-5 md:ml-3 ml-1 lg:text-lg md:text-lg text-xs">
-                                        <li>{{ subject.subject_name }}</li>
+                                    <ul v-if="subject.course_name === course.course_name && subject.term_name === term.term && subject.subject_name" class="lg:text-lg md:text-lg text-xs">
+                                        <li>- {{ subject.subject_name }}</li>
                                     </ul>
                                 </div>
                             </td>
