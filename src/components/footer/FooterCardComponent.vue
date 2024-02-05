@@ -2,7 +2,7 @@
   <div class="lg:w-[32%] md:w-[48%] w-full">
     <div>
       <span v-for="(image, index) in card.images" :key="index"></span>
-      <img v-if="card.images" :src="card.images[0]" alt="Card Image" class="object-cover object-center lg:h-64 md:h-56 h-full"/>
+      <img v-if="card.images" :src="card.images[0]" alt="Card Image" class="object-cover object-top lg:h-64 md:h-56 h-full"/>
     </div>
     <div class="font-bold md:text-xl text-lg">{{ card.title }}</div>
     <p v-html="truncateDescription(card.description, 100)" class="text-gray-700 text-base h-15"></p>
@@ -43,7 +43,7 @@
               </svg>
               <span class="sr-only">Close modal</span>
             </button>
-            <img :src="image" alt="" class="w-full lg:h-80 md:h-96 h-60 object-cover object-center rounded-t-sm">
+            <img :src="image" alt="" class="w-full lg:h-80 md:h-96 h-60 object-cover object-top rounded-t-sm">
           </span>
           <!-- title desc created at and created by -->
           <div class="lg:px-10 md:px-8 px-5 my-3">
