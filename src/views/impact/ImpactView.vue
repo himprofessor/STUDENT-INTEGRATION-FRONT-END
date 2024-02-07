@@ -1,20 +1,16 @@
 <template>
     <div class="bg-002 text-white my-10">
         <div >
-            <h1
-            class="p-4 text-center lg:text-3xl md:text-2xl text-xl font-bold text-white"
-            >
-            Impact
+            <h1 class="p-4 text-center lg:text-3xl md:text-2xl text-xl font-bold text-white" >
+                Impact
             </h1>
             <p
-            class="flex whitespace-normal break-all text-center mx-3 justify-center text-white whitespace-normal flex-wrap font-normal lg:text-xl sm:px-16 xl:px-47"
-            >
-            Once they have found a job, all our graduates support their family and
-            their community. On average, our alumni give back 31% of their salary to
-            their families.
+                class="flex whitespace-normal break-all text-center mx-3 justify-center text-white whitespace-normal flex-wrap font-normal lg:text-xl sm:px-16 xl:px-47"> 
+                Once they have found a job, all our graduates support their family and
+                their community. On average, our alumni give back 31% of their salary to
+                their families.
             </p>
         </div>
-    
         <div class="w-full flex flex-wrap dark:text-white text-center justify-center">
             <div v-for="(impact,index) in impacts" :key="index" class="pair-container lg:w-[18%] md:w-[45%] w-full">
                 <div class="my-5">
