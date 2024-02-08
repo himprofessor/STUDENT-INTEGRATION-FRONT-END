@@ -18,7 +18,8 @@ module.exports = {
         'my-text': ['"Open Sans", Arial, sans-serif'] 
       },
       colors:{
-        'textA':'#009DE1'
+        'textA':'#009DE1',
+        'textB':'#79c0DB',
       }
     },
   },

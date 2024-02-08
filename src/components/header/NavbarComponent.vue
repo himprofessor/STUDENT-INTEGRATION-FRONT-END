@@ -19,64 +19,65 @@
         <ul :class="{'lg:flex md:items-center z-[-1] md:z-auto lg:static absolute bg-white w-full md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 transition-all ease-in duration-500 font-serif': !menuOpen, block: menuOpen, hidden: !menuOpen, 'mt-6': menuOpen,}" style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">
           <!-- home page  -->
           <li class="block px-4 py-2 text-gray-500 font-serif">
-            <a :class="{'text-textA': !$route.path || $route.path === '/' }" href="/" class="md:hover:text-gray-400 md:ml-4 block text-gray-500" style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">
+            <a :class="{'text-textA': !$route.path || $route.path === '/' }" href="/" class="md:hover:text-textB md:ml-4 block text-gray-500" style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">
               Home
             </a>
           </li>
 
           <!-- Curriculum page-->
           <router-link to="/curriculum" class="block text-gray-500" style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">
-            <li :class="{ 'text-textA': $route.path === '/curriculum' }" class="hover:text-gray-400 block px-4 py-2 text-gray-500 md:ml-4">
+            <li :class="{ 'text-textA': $route.path === '/curriculum' }" class="hover:text-textB block px-4 py-2 text-gray-500 md:ml-4">
               Curriculum
             </li>
           </router-link>
 
           <!-- department & staff page -->
           <router-link to="/department-staff" class="block text-gray-500" style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">
-            <li :class="{ 'text-textA': $route.path === '/department-staff' }" class="hover:text-gray-400 block px-4 py-2 md:ml-4 text-gray-500">
+            <li :class="{ 'text-textA': $route.path === '/department-staff' }" class="hover:text-textB block px-4 py-2 md:ml-4 text-gray-500">
               Department & Staff
             </li>
           </router-link>
 
-          <!-- group student life page  -->
+          <!-- group student life page -->
           <li id="menu-item-600" class="font-serif z-10" style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">
             <div class="relative group">
-              <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="hover:text-gray-400 md:ml-4 px-3 py-4 flex items-center text-gray-500 font-serif" style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">
-                Student's Life
+              <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="hover:text-textB md:ml-4 px-3 py-4 flex items-center text-gray-500 font-serif" style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">
+                <div :class="{ 'text-textA': $route.path === '/student_activity' || $route.path === '/rules'}" class="hover:text-textB block px-4 py-2 text-gray-500">Student's Life</div> 
                 <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
                 </svg>
               </button>
-
               <div class="dropdown-content absolute hidden bg-gray-50 text-black group-hover:block w-48 font-serif z-10 border-blue-400 border-t-2">
+                <!--item 1 -->
                 <router-link to="/student_activity" class="block text-gray-500" style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">
-                  <li :class="{ 'text-textA': $route.path === '/student_activity' }" class="hover:text-gray-400 block px-4 py-2 text-gray-500">
+                  <li :class="{ 'text-textA': $route.path === '/student_activity' }" class="hover:text-textB block px-4 py-2 text-gray-500">
                     Student Activity
                   </li>
                 </router-link>
-
+                <!--item 2 -->
                 <a href="#" class="hover:text-textA block px-3 py-2 text-gray-500" style=" font-size: 14px; font-family: 'Kantumruy Pro', sans-serif;">
                   Education & Social development
                 </a>
-
-                <a href="#" class="hover:text-textA block px-3 py-2 text-gray-500" style="font-size: 14px;font-family: 'Kantumruy Pro', sans-serif;">
-                  Rules
-                </a>
+                <!-- item 3 -->
+                <router-link to="/rules" class="block text-gray-500" style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">
+                  <li :class="{ 'text-textA': $route.path === '/rules' }" class="hover:text-textB block px-4 py-2 text-gray-500">
+                    Our Rule
+                  </li>
+                </router-link>
               </div>
-
             </div>
           </li>
 
           <!-- career Opportunity page-->
           <router-link to="/career-opportunity" class="block text-gray-500" style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">
-            <li :class="{ 'text-textA': $route.path === '/career-opportunity' }" class="hover:text-gray-400 md:ml-4 block px-4 py-2 text-gray-500">
+            <li :class="{ 'text-textA': $route.path === '/career-opportunity' }" class="hover:text-textB md:ml-4 block px-4 py-2 text-gray-500">
               Career Opportunity
             </li>
           </router-link>
           
           <!-- Curriculum page-->
           <router-link to="/news_update" class="block text-gray-500" style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">
-            <li :class="{ 'text-textA': $route.path === '/news_update' }" class="hover:text-gray-400 block px-4  md:ml-4 py-2 text-gray-500">
+            <li :class="{ 'text-textA': $route.path === '/news_update' }" class="hover:text-textB block px-4  md:ml-4 py-2 text-gray-500">
               News/Update
             </li>
           </router-link>
