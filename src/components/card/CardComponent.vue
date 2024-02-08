@@ -3,7 +3,7 @@
     <!-- img, title and desc -->
     <div>
       <span v-for="(image, index) in card.images" :key="index"></span>
-      <img v-if="card.images" :src="card.images[0]" alt="Card Image" class="mb-3 w-full lg:h-52 h-60 object-cover object-center"/>
+      <img v-if="card.images" :src="card.images[0]" alt="Card Image" class="mb-3 w-full lg:h-52 h-60 object-cover object-top"/>
     </div>
     <p class="font-bold md:text-xl text-lg">{{ card.title }}</p>
     <p v-html="truncateDescription(card.description)"></p>
@@ -44,7 +44,7 @@
               </svg>
               <span class="sr-only">Close modal</span>
             </button>
-            <img :src="image" alt="" class="w-full lg:h-80 md:h-96 h-60 object-cover object-center rounded-t-sm">
+            <img :src="image" alt="" class="w-full lg:h-80 md:h-96 h-60 object-cover object-top rounded-t-sm">
           </span>
           <!-- title desc created at and created by -->
           <div class="lg:px-10 md:px-5 px-5  my-3">

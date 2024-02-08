@@ -4,7 +4,7 @@
   <CardView />
   <CurriculumView />
   <CourseView/>
-  <InternShipView/>
+  <InternshipView/>
   <PartnershipView />
 </template>
 
@@ -13,7 +13,7 @@ import SlideshowView from '@/views/slideshow/SlideshowView.vue';
 import CardView from '@/views/card/CardView.vue'; // Updated import path
 import CurriculumView from '../curriculum/CurriculumView.vue';
 import CourseView from '@/views/course/CourseView.vue';
-import InternShipView from '@/views/internship/InternShipView.vue';
+import InternshipView from '@/views/internship_program/InternshipView.vue'
 import PartnershipView from '../partnership/PartnershipView.vue';
 
 export default {
@@ -23,7 +23,7 @@ export default {
     CurriculumView,
     CourseView,
     PartnershipView,
-    InternShipView,
+    InternshipView,
   }
 }
 </script>
