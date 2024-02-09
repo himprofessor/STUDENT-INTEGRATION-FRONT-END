@@ -31,6 +31,11 @@ const routes = [
         name:'/news_update',
         component: () => import('../views/news_update/News_Update.vue')
     },
+    {
+        path:'/rules',
+        name:'/rules',
+        component: () => import('../views/rule/RuleView.vue')
+    },
 ];
 
 const router = createRouter({
