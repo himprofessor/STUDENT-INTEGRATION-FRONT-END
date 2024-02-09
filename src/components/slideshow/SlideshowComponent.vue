@@ -5,7 +5,7 @@
     <div class="slides relative h-56 overflow-hidden md:h-96">
       <!-- Slides -->
       <div v-for="(slide, index) in slides" :key="index" :class="{'opacity-100': index === currentIndex, 'opacity-0': index !== currentIndex, 'transition-opacity': true,}" data-carousel-item :aria-current="index === currentIndex" :aria-label="`Slide ${index + 1}`">
-        <img :src="slide.image" class="absolute block w-full h-full object-cover" alt="..."/>
+        <img :src="slide.image" class="absolute block w-full h-full object-cover object-top" alt="slideshow"/>
         <div v-if="slide.heading || slide.description" class="absolute inset-0 bg-black bg-opacity-40"></div>
         <span class="absolute text-white inset-20 flex items-center">
           <div class="w-full text-center md:block md:text-start">
