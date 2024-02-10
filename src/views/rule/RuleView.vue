@@ -1,10 +1,10 @@
 <template>
   <div class="lg:mx-20 md:mx-10 mx-5">
-    <h1 class="text-center lg:text-3xl md:text-2xl text-xl font-bold my-5">
+    <h1 class="text-center lg:text-3xl md:text-2xl text-xl font-bold mb-3">
       All the student must follow of these rule 
     </h1>
     <div v-for="(rule, index) in rules" :key="index">
-      <embed
+      <iframe
         :src="rule.file"
         type="application/pdf"
         width="100%"
