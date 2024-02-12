@@ -1,17 +1,15 @@
 <template>
   <div>
-    <div class="mt-5">
-      <ActivityImage />
-      <StudentActivityComponent
-        v-for="(card, index) in cards"
-        :key="index"
-        :card="card"
-        :class="{
-          'flex-row-reverse': index % 2 === 0,
-          'flex-col': isMobileOrTablet
-        }"
-      ></StudentActivityComponent>
-    </div>
+    <ActivityImage />
+    <StudentActivityComponent
+      v-for="(card, index) in cards"
+      :key="index"
+      :card="card"
+      :class="{
+        'flex-row-reverse': index % 2 === 0,
+        'flex-col': isMobileOrTablet
+      }"
+    ></StudentActivityComponent>
   </div>
 </template>
 <script>
