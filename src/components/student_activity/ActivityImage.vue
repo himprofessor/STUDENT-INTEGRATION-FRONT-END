@@ -3,8 +3,10 @@
     <img :src="require(`../../assets/activity/6.png`)" class="w-full h-full object-cover" alt="student activity image">
     <div class="absolute inset-0 bg-black bg-opacity-40"></div>
     <span class="absolute text-white inset-0 flex items-end mx-20 mb-12">
-      <div class="font-bold md:block md:text-center">
-        <p class="md:text-4xl lg:text-4xl">During two years there will be so many activities that the students need to do</p>
+      <div class="font-bold text-center md:block">
+        <p class="md:text-4xl lg:text-5xl ">
+          During two years there will be so many activities that the students need to do
+        </p>
       </div>
     </span>
   </div>

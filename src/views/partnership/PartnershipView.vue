@@ -3,7 +3,7 @@
     Our partnership
   </div>
   <div class="flex flex-wrap gap-3 lg:mx-20 md:mx-10 mx-5 my-5 justify-center">
-    <CardComponent 
+    <PartnershipComponent 
       v-for="(partnership, index) in partnerships" 
       :key="index" 
       :partnership="partnership"
@@ -12,12 +12,12 @@
 </template>
 
 <script>
-import CardComponent from '../../components/partnership/CardImageComponent.vue';
+import PartnershipComponent from '@/components/partnership/PartnershipComponent.vue';
 import http from "@/http-common";
 
 export default {
   components: {
-    CardComponent,
+    PartnershipComponent,
   },
   data() {
     return {
