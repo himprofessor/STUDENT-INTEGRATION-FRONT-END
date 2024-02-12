@@ -32,7 +32,8 @@ export default {
       http
       .get("api/curriculum/list")
       .then((response) => {
-        this.curriculums = response.data.data;
+        this.curriculums = response.data.data.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+        this.curriculums = this.curriculums.slice(0, 1);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);

@@ -1,12 +1,9 @@
 <template>
   <div>
     <div class="inline-flex items-center justify-center w-full">
-      <hr class="w-full mx-20 h-px my-8 border-0 dark:bg-gray-700" />
+      <hr class="w-full lg:mx-20 md:mx-10 mx-5 h-px lg:mt-8 md:mt-8 lg:mb-0 md:mb-0 mb-4 border-0 bg-white" />
     </div>
-    <footer
-      :class="{ 'md:bg-transparent': menuOpen }"
-      class="p-4 w-full mr-20 shadow-white md:flex md:items-center md:justify-between mr-20 text-gray-500"
-    >
+    <footer :class="{ 'md:bg-transparent': menuOpen }" class="w-full mr-20 shadow-white md:flex md:items-center md:justify-between mr-20 text-gray-500">
       <!-- Logo -->
       <div class="flex justify-between items-center">
         <router-link
@@ -59,130 +56,71 @@
         </span>
       </div>
       <!-- Menu Items -->
-      <ul
-        class="dropdown-up"
-        :class="{
-          'md:flex md:flex-row md:items-center z-[-1] md:z-auto md:static absolute w-full md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 transition-all ease-in duration-500 font-serif':
-            !menuOpen,
-          block: menuOpen,
-          hidden: !menuOpen,
-          'mb-10 md:mt-0 md:-mb-10': menuOpen,
-        }"
-        style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif"
-      >
-        <!-- Menu Items -->
-        <li class="block px-4 py-2 text-gray-500 font-serif">
-          <router-link
-            :to="{ path: '/', exact: true }"
-            class="block hover:text-gray-600 text-white"
-            style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif"
-          >
+      <ul class="dropdown-up" :class="{'md:flex md:flex-row md:items-center z-[-1] md:z-auto md:static absolute w-full md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 transition-all ease-in duration-500 font-serif':!menuOpen, block: menuOpen,hidden: !menuOpen,'mb-10 md:mt-0 md:-mb-10': menuOpen,}" style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">
+        <!-- home page  -->
+        <li class="block text-textB px-4 py-2 font-serif">
+          <a :class="{'text-textB font-bold': !$route.path || $route.path === '/' }" href="/" class="md:ml-4 block" style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">
             Home
-          </router-link>
+          </a>
         </li>
-        <li class="block px-4 py-2 text-gray-500 font-serif">
-          <router-link
-            to="/curriculum"
-            class="block hover:text-gray-600 text-white"
-            style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif"
-          >
+
+        <!-- Curriculum page-->
+        <li class="block px-4 py-2 text-textB  font-serif">
+          <a :class="{'text-textB font-bold': $route.path === '/curriculum' }" href="/curriculum" class="md:ml-4 block" style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">
             Curriculum
-          </router-link>
+          </a>
         </li>
-        <li class="block px-4 py-2 text-gray-500 font-serif">
-          <router-link
-            to="/department-staff"
-            class="block hover:text-gray-600 text-white"
-            style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif"
-          >
+
+        <!-- department & staff page -->
+        <li class="block px-4 py-2 text-textB  font-serif">
+          <a :class="{'text-textB font-bold': $route.path === '/department-staff' }" href="/department-staff" class="md:ml-4 block" style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">
             Department & Staff
-          </router-link>
+          </a>
         </li>
-        <li
-          id="menu-item-600"
-          class="font-serif z-10"
-          style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif"
-        >
+
+        <!-- group student life page -->
+        <li id="menu-item-600" class="font-serif z-10" style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">
           <div class="relative group">
-            <button
-              id="dropdownNavbarLink"
-              data-dropdown-toggle="dropdownNavbar"
-              class="px-3 py-4 rounded-sm flex items-center text-white font-serif"
-              style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif"
-            >
-              Student's Life
-              <svg
-                class="w-2.5 h-2.5 ml-2.5"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 10 6"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="m1 1 4 4 4-4"
-                />
+            <div :class="{'text-textB font-bold': $route.path === '/student_activity' || $route.path === '/rules' }" id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="md:ml-4 px-3 py-4 flex items-center font-serif" style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">
+              <li class="block py-2 text-textB font-serif">
+                <a :class="{'text-textB font-bold': $route.path === '/student_activity' || $route.path === '/rules' }" class="mx-4 block" style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">
+                  Student's Life
+                </a>
+              </li>
+              <svg class="w-2.5 h-2.5 ml-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
               </svg>
-            </button>
-            <div
-              class="dropdown-content absolute hidden bg-gray-50 text-black group-hover:block w-48 font-serif dropdown-up"
-            >
-              <router-link
-                to="/clubs-organizations"
-                class="hover:text-textA block px-3 py-2 text-gray-500"
-                style="
-                  font-size: 14px;
-                  font-family: 'Kantumruy Pro', sans-serif;
-                "
-              >
-                Clubs & Organizations
-              </router-link>
-              <router-link
-                to="/events-activities"
-                class="hover:text-textA block px-3 py-2 text-gray-500"
-                style="
-                  font-size: 14px;
-                  font-family: 'Kantumruy Pro', sans-serif;
-                "
-              >
-                Events & Activities
-              </router-link>
-              <router-link
-                to="/resources"
-                class="hover:text-textA block px-3 py-2 text-gray-500"
-                style="
-                  font-size: 14px;
-                  font-family: 'Kantumruy Pro', sans-serif;
-                "
-              >
-                Resources
-              </router-link>
+            </div>
+            <div class="dropdown-content absolute hidden bg-gray-50 text-black group-hover:block w-48 font-serif z-10 bg-gray-300">
+              <!--item 1 -->
+              <li class="block py-2 text-textB  font-serif">
+                <a :class="{'text-textB font-bold': $route.path === '/student_activity' }" href="/student_activity" class="mx-4 block" style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">
+                  Student Activities Club
+                </a>
+              </li>
+              <!-- item 2 -->
+              <li class="block py-2 text-textB font-serif">
+                <a :class="{'text-textB font-bold': $route.path === '/rules' }" href="/rules" class="mx-4 block" style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">
+                  Our Rule
+                </a>
+              </li>
             </div>
           </div>
         </li>
-        <li class="block px-4 py-2 text-gray-500 font-serif">
-          <a
-            href="#"
-            class="block hover:text-gray-600 text-white"
-            style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif"
-            >Contact Us</a
-          >
-        </li>
-        <router-link
-          to="/career-opportunity"
-          class="block text-gray-500"
-          style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif"
-        >
-          <li
-            :class="{ 'text-textA': $route.path === '/career-opportunity' }"
-            class="hover:text-gray-500 block px-4 py-2 text-white"
-          >
+
+        <!-- career Opportunity page-->
+        <li class="block text-textB px-4 py-2 font-serif">
+          <a :class="{'text-textB font-bold': $route.path === '/career-opportunity' }" href="/career-opportunity" class="md:ml-4 block" style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">
             Career Opportunity
-          </li>
-        </router-link>
+          </a>
+        </li>
+        
+        <!-- New/update page-->
+        <li class="block text-textB px-4 py-2 font-serif">
+          <a :class="{'text-textB font-bold': $route.path === '/news_update' }" href="/news_update" class="md:ml-4 block" style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">
+            News/Update
+          </a>
+        </li>
       </ul>
     </footer>
     <div class="card bg-002 h-7 p-1">
@@ -224,8 +162,5 @@ export default {
 .dropdown-up .dropdown-content {
   top: auto;
   bottom: 100%;
-}
-.text-textA {
-  color: gray; /* Replace with the desired color value */
 }
 </style>

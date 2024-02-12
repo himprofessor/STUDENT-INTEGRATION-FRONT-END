@@ -36,10 +36,7 @@ export default {
       http
         .get("api/student-activity/list")
         .then((response) => {
-          // Sort the cards based on the creation date in descending order
           this.cards = response.data.data.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
-
-          // Display only the first three cards
           this.cards = this.cards.slice(0, 4);
         })
         .catch((error) => {

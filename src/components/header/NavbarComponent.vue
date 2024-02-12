@@ -55,7 +55,7 @@
                 <!--item 1 -->
                 <li class="block py-2 text-gray-500 font-serif">
                   <a :class="{'text-textA font-bold': $route.path === '/student_activity' }" href="/student_activity" class="md:hover:text-textB mx-4 block text-gray-500" style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">
-                    Student Activity
+                    Student Activities Club
                   </a>
                 </li>
                 <!-- item 2 -->
@@ -75,7 +75,7 @@
             </a>
           </li>
           
-          <!-- Curriculum page-->
+          <!---New/update page-->
           <li class="block px-4 py-2 text-gray-500 font-serif">
             <a :class="{'text-textA border-b-2 border-blue-400 font-bold': $route.path === '/news_update' }" href="/news_update" class="md:hover:text-textB md:ml-4 block text-gray-500" style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">
               News/Update
