@@ -2,7 +2,7 @@
 <template>
   <div class="card flex flex-col md:flex-row lg:my-1">
     <div class="md:w-2/5 lg:w-1/2 grid md:place-items-center w-full">
-      <img :src="career.media_id" alt="Career Image" class="w-full h-full object-cover" />
+      <img :src="career.media_id" alt="Career Image" class="w-full lg:h-[170px] md:h-[150px] h-60 object-cover" />
     </div>
     <!-- text content  -->
     <div class="md:w-5/6 bg-white shadow-md flex flex-col space-y-3 lg:px-3 md:px-3 pb-3">
@@ -32,7 +32,7 @@
             <img :src="career.media_id" alt="" class="w-full lg:h-80 md:h-96 h-60 object-cover object-center rounded-t-sm">
           </span>
           <div class="lg:px-10 md:px-10 px-5 my-3">
-            <span class="lg:text-lg md:text-3xl text-lg font-semibold">{{ career.title }}</span><br>
+            <span class="lg:text-lg md:text-3xl text-lg font-bold">{{ career.title }}</span><br>
             <span v-html="career.description" class="lg:text-sm md:text-xl text-sm"/>
           </div>
         </div>
