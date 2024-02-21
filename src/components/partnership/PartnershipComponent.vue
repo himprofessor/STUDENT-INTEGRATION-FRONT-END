@@ -5,8 +5,9 @@
     <!-- hover text  -->
     <div v-if="activeIndex === index" class="hover:border-blue-500 rounded-md border-2 absolute inset-0 bg-black bg-opacity-50 text-center text-white flex flex-col justify-center">
       <span class="text-3xl font-semibold">{{ partnership.partnership_name }}</span>
-      <p class="whitespace-normal whitespace-wrap p-3">{{ partnership.address }}</p>
-      <a :href="partnership.website" class="text-textA">Link here</a>
+      <p class="whitespace-normal whitespace-wrap px-3 text-sm">{{ partnership.address }}</p>
+      <a v-if="partnership.website" :href="partnership.website" class="text-textA">Link here</a>
+      <p v-else>{{ partnership.website }}</p>
     </div>
   </div>
 </template>
