@@ -68,7 +68,8 @@ export default {
         .get("api/impact/list")
         .then((response) => {
           console.log("API Response:", response);
-          this.impacts = response.data.data;
+          this.impacts = response.data.data.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+          this.impacts = this.impacts.slice(0, 4);
         })
         .catch((error) => {
           console.error("Error fetching data:", error);
