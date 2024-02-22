@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import http from "@/http-common"; // Import http-common.js
+import http from "@/http-common";
 import InternshipComponent from '@/components/internship_program/InternshipComponent.vue';
 
 export default {

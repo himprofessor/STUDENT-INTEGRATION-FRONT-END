@@ -16,7 +16,7 @@
 
 <script>
 import CardComponent from "@/components/card/CardComponent.vue";
-import http from "@/http-common"; // Import http-common.js
+import http from "@/http-common";
 
 export default {
   components: {
@@ -32,7 +32,6 @@ export default {
   },
   methods: {
     fetchData() {
-      // Make a GET request to your Laravel API endpoint
       http
         .get("api/student-activity/list")
         .then((response) => {

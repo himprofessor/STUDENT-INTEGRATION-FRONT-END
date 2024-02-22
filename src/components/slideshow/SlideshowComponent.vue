@@ -60,7 +60,7 @@ export default {
     startAutomaticSlideshow() {
       setInterval(() => {
         this.nextSlide();
-      }, 7000); // Adjust the interval as needed (5000 milliseconds = 5 seconds)
+      }, 7000);
     },
   },
   mounted() {

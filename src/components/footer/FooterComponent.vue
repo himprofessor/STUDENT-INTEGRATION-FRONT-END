@@ -6,52 +6,18 @@
     <footer :class="{ 'md:bg-transparent': menuOpen }" class="w-full mr-20 shadow-white md:flex md:items-center md:justify-between mr-20 text-gray-500">
       <!-- Logo -->
       <div class="flex justify-between items-center">
-        <router-link
-          to="/"
-          class="text-2xl mx-5 font-[Poppins] cursor-pointer font-serif"
-        >
-          <img
-            class="h-11 inline md:ml-12 md:ml-10"
-            src="@/assets/logo-en.png"
-          />
-        </router-link>
+        <div class="text-2xl mx-5 font-[Poppins] cursor-pointer font-serif">
+          <a href="/">
+            <img class="h-11 inline md:ml-12 md:ml-10" src="@/assets/logo-en.png"/>
+          </a>
+        </div>
         <!-- Hamburger Icon -->
-        <span
-          @click="toggleMenu"
-          class="text-4xl cursor-pointer mx-2 md:hidden block font-serif"
-          style="font-family: 'Kantumruy Pro', sans-serif"
-        >
-          <svg
-            v-if="menuIcon === 'menu'"
-            class="w-6 h-6 text-gray-800 dark:text-white"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 17 14"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M1 1h15M1 7h15M1 13h15"
-            ></path>
+        <span @click="toggleMenu" class="text-4xl cursor-pointer mx-2 md:hidden block font-serif" style="font-family: 'Kantumruy Pro', sans-serif">
+          <svg v-if="menuIcon === 'menu'" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path>
           </svg>
-          <svg
-            v-else-if="menuIcon === 'close'"
-            class="w-6 h-6 text-gray-800 dark:text-white"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M6 18L18 6M6 6l12 12"
-            ></path>
+          <svg v-else-if="menuIcon === 'close'" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
           </svg>
         </span>
       </div>

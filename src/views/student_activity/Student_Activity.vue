@@ -93,16 +93,15 @@ export default {
 };
 </script>
 
-
 <style scoped>
-@media (max-width: 768px) {
-  .flex-col {
-    flex-direction: column;
+  @media (max-width: 768px) {
+    .flex-col {
+      flex-direction: column;
+    }
   }
-}
-@media (max-width: 1280px) {
-  .flex-col {
-    flex-direction: column;
+  @media (max-width: 1280px) {
+    .flex-col {
+      flex-direction: column;
+    }
   }
-}
 </style>

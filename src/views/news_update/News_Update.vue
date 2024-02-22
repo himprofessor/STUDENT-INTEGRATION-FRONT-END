@@ -30,58 +30,56 @@
 </template>
   
 <script>
-  import CardComponent from "@/components/card/CardComponent.vue";
-  import http from "@/http-common"; // Import http-common.js
+import CardComponent from "@/components/card/CardComponent.vue";
+import http from "@/http-common";
   
-  export default {
-    components: {
-      CardComponent,
+export default {
+  components: {
+    CardComponent,
+  },
+  data() {
+    return {
+      cards: [],
+      pageRow: 12,
+      currentPage: 1,
+    };
+  },
+  mounted() {
+    this.fetchData();
+  },
+  methods: {
+    fetchData() {
+      http
+        .get("api/student-activity/list")
+        .then((response) => {
+          this.cards = response.data.data;
+        })
+        .catch((error) => {
+          console.error("Error fetching data:", error);
+        });
     },
-    data() {
-      return {
-        cards: [],
-        pageRow: 12,
-        currentPage: 1,
-      };
+    // pagination
+    previousPage() {
+      if (this.currentPage > 1) {
+        this.currentPage--;
+      }
     },
-    mounted() {
-      this.fetchData();
+    nextPage() {
+      if (this.currentPage < this.totalPages) {
+        this.currentPage++;
+      }
     },
-    methods: {
-      fetchData() {
-        // Make a GET request to your Laravel API endpoint
-        http
-          .get("api/student-activity/list")
-          .then((response) => {
-            // Sort the cards based on the creation date in descending order
-            this.cards = response.data.data;
-          })
-          .catch((error) => {
-            console.error("Error fetching data:", error);
-          });
-      },
-      // pagination
-      previousPage() {
-        if (this.currentPage > 1) {
-          this.currentPage--;
-        }
-      },
-      nextPage() {
-        if (this.currentPage < this.totalPages) {
-          this.currentPage++;
-        }
-      },
+  },
+  computed: {
+    // pagination 
+    totalPages() {
+      return Math.ceil(this.cards.length / this.pageRow);
     },
-    computed: {
-      // pagination 
-      totalPages() {
-        return Math.ceil(this.cards.length / this.pageRow);
-      },
-      displayedItems() {
-        const startIndex = (this.currentPage - 1) * this.pageRow;
-        const endIndex = startIndex + this.pageRow;
-        return this.cards.slice(startIndex, endIndex);
-      },
-    }
-  };
+    displayedItems() {
+      const startIndex = (this.currentPage - 1) * this.pageRow;
+      const endIndex = startIndex + this.pageRow;
+      return this.cards.slice(startIndex, endIndex);
+    },
+  }
+};
 </script>
