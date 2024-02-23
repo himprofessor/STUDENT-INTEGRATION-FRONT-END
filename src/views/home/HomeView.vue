@@ -10,7 +10,7 @@
 
 <script>
 import SlideshowView from '@/views/slideshow/SlideshowView.vue';
-import CardView from '@/views/card/CardView.vue'; // Updated import path
+import CardView from '@/views/card/CardView.vue';
 import CurriculumView from '../curriculum/CurriculumView.vue';
 import CourseView from '@/views/course/CourseView.vue';
 import InternshipView from '@/views/internship_program/InternshipView.vue'

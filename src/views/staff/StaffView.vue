@@ -28,9 +28,7 @@
       </div>
     </div>
   </div>
-  <!--Import Campusmap  -->
   <MapComponent/>
-  <!-- pagination of staff -->
   <div aria-label="pagination">
     <ul class="inline-flex -space-x-px text-sm my-5 lg:mx-20 md:mx-10 mx-5">
       <li>
@@ -110,7 +108,7 @@ export default {
   },
 
   computed: {
-    //filter each staff in each department 
+    //filter staff in each department 
     filteredStaffs() {
       if (this.currentDepartment === 'all') {
         return this.staffs;

@@ -2,7 +2,7 @@
   <div>
     <HeaderComponent/>
     <NavbarComponent/>
-    <router-view></router-view> <!-- This is where the components for each route will be rendered -->
+    <router-view></router-view>
     <FooterView/>
   </div>
 </template>

@@ -3,7 +3,9 @@
     <nav class="p-4 bg-white lg:flex justify-between md:items-center border-gray-200 ">
       <div class="flex justify-between md:items-center md:flex justify-between">
         <span class="text-2xl font-[Poppins] cursor-pointer font-serif" style="font-size: 14px; font-family: 'Kantumruy Pro', sans-serif">
-          <img class="lg:ml-12 md:ml-10 h-12 inline " src="@/assets/logo-en.png"/>
+          <a href="/">
+            <img class="lg:ml-12 md:ml-10 h-12 inline " src="@/assets/logo-en.png"/>
+          </a>
         </span>
         <span @click="toggleMenu" class="lg:hidden md:block md:mr-10 text-4xl cursor-pointer flex-end font-serif"  style="font-family: 'Kantumruy Pro', sans-serif">
           <svg v-if="menuIcon === 'menu'" class="md:w-9 md:h-9 w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14" stroke="currentColor">

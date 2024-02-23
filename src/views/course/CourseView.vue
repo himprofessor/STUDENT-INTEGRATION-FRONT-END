@@ -16,11 +16,10 @@
     </div>
   </div>
 </template>
-
   
 <script>
-import http from "@/http-common"; // Import http-common.js
 import CourseComponent from "@/components/course/CourseComponent.vue";
+import http from "@/http-common";
 
 export default {
   components: {

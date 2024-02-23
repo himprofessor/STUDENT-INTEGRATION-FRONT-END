@@ -17,31 +17,26 @@
             </ul>
         </div>
     </div>
-    
     <div class="lg:mx-20 md:mx-10 mx-0">
         <svg class="svg" width="1094" height="906" viewBox="0 0 1094 906" fill="none" xmlns="http://www.w3.org/2000/svg">
             <!-- ground floor  -->
             <g @mousemove="showTooltip" @mouseleave="hideTooltip" v-if="currentFloor === 'ground'" fill="none">
                 <GroundFloor/>
             </g>
-
             <!-- first floor  -->
             <g @mousemove="showTooltip" @mouseleave="hideTooltip" v-if="currentFloor === 'first'">
                 <FirstFloor/>
             </g>
-
             <!-- second floor  -->
             <g @mousemove="showTooltip" @mouseleave="hideTooltip" v-if="currentFloor === 'second'">
                 <SecondFloor/>
             </g>
-
             <!-- top floor  -->
             <g @mousemove="showTooltip" @mouseleave="hideTooltip" v-if="currentFloor === 'third'">
                 <TopFloor/>
             </g>
         </svg>
-
-        <!-- tooltips -->
+        
         <div class="description absolute text-textA lg:w-[30%] md:w-[30%] w-[70%] bg-white py-2 px-2 z-5 shadow-2xl border border-1" :style="tooltipStyle" v-if="isTooltipVisible">
             <span class="title font-bold">{{ tooltipContent }}</span><br />
             <span class="desc whitespace-normal break-all">{{ tooltipDesc }}</span>
@@ -131,8 +126,8 @@ export default {
     .fiter{
         border: 1px solid gray;
     }
+    /* Styles for mobile devices */
     @media (min-width: 360px) {
-        /* Styles for mobile devices */
         .svg {
             height: 10%;
             width: 100%;

@@ -36,23 +36,22 @@ export default {
 
 }
 </script>
-
 <style scoped>
-.enabled {
-cursor: pointer;
-}
-.description.active {
-display: block;
-}
-.description .title{
-font-weight: bold;
-}
-.enabled:hover {
-fill: #FF9933;
-transition: 0.3s;
-}
-.park:hover {
-  fill: #79c0DB;
-  transition: 0.3s;
-}
+  .enabled {
+    cursor: pointer;
+  }
+  .description.active {
+    display: block;
+  }
+  .description .title{
+    font-weight: bold;
+  }
+  .enabled:hover {
+    fill: #FF9933;
+    transition: 0.3s;
+  }
+  .park:hover {
+    fill: #79c0DB;
+    transition: 0.3s;
+  }
 </style>

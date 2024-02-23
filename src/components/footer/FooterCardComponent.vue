@@ -117,7 +117,6 @@ export default {
 <style scoped>
   .detail {
     height: 500px;
-    /* overflow-y: hidden;  */
   }
   @keyframes zoom-in {
     0% {
